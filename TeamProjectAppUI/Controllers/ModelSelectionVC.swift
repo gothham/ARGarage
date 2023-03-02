@@ -43,35 +43,43 @@ class ModelSelectionVC: UIViewController,UICollectionViewDelegate,UICollectionVi
         self.navigationController?.pushViewController(qlvc, animated: true)
         qlvc.activeImage = selectedImageName
     }
-    fileprivate func appendingTheModelObject() {
+    
+    enum ModelType : String {
         
-        models.append( Model(imageName: "RobotImage"))
-        models.append( Model(imageName: "RadioImage"))
-        models.append( Model(imageName: "WateringCanImage"))
-        models.append( Model(imageName: "TeaPotImage"))
-        models.append( Model(imageName: "GuitarImage"))
-        models.append( Model(imageName: "CakeImage"))
-        models.append( Model(imageName: "CupSaucerImage"))
-        models.append( Model(imageName: "GramoPhoneImage"))
-        models.append( Model(imageName: "AeroPlaneImage"))
-        models.append( Model(imageName: "AirCraftImage"))
-        models.append( Model(imageName: "RedChairImage"))
-        models.append( Model(imageName: "ShoeImage"))
-        models.append( Model(imageName: "SportShoeImage"))
-        models.append( Model(imageName: "ToyImage"))
-        models.append( Model(imageName: "TulipImage"))
+        case robot          = "RobotImage"
+        case radio          = "RadioImage"
+        case wateringcan    = "WateringCanImage"
+        case teapot         = "TeaPotImage"
+        case guitar         = "GuitarImage"
+        case cake           = "CakeImage"
+        case cupsaucer      = "CupSaucerImage"
+        case gramophone     = "GramoPhoneImage"
+        case aeroplane      = "AeroPlaneImage"
+        case aircraft       = "AirCraftImage"
+        case redchair       = "RedChairImage"
+        case shoe           = "ShoeImage"
+        case sportshoe      = "SportShoeImage"
+        case toy            = "ToyImage"
+        case tulip          = "TulipImage"
     }
     
+    fileprivate func appendingTheModelObject(){
+        
+        let modelTypes : [ModelType] = [.robot,.radio,.wateringcan,.teapot,.guitar,.cake,.cupsaucer,.gramophone,.aeroplane,.aircraft,.redchair,.shoe,.sportshoe,.toy,.tulip]
+        for modelType in modelTypes {
+            models.append(Model(imageName: modelType.rawValue))
+        }
+    }
     
-       func imageAppearance(){
+    func imageAppearance(){
            
-           imageView.layer.borderColor = .init(red: 125/255, green: 125/255, blue: 125/255, alpha: 0.5)
-           imageView.layer.borderWidth = 0.5
-           imageView.layer.cornerRadius = 20.0
-           guard let selectedImageName = self.selectedImageName else{ return }
-           imageView.image = UIImage(named: selectedImageName)
+        imageView.layer.borderColor = .init(red: 125/255, green: 125/255, blue: 125/255, alpha: 0.5)
+        imageView.layer.borderWidth = 0.5
+        imageView.layer.cornerRadius = 20.0
+        guard let selectedImageName = self.selectedImageName else{ return }
+        imageView.image = UIImage(named: selectedImageName)
            
-       }
+    }
        
     // Collectionview
     
