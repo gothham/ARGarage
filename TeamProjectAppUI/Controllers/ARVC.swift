@@ -1,0 +1,123 @@
+//
+//  ARVC.swift
+//  TeamProjectAppUI
+//
+//  Created by sonai-zstch1129 on 23/02/23.
+//
+
+
+import UIKit
+import RealityKit
+import ARKit
+
+class ARVC: UIViewController {
+
+    @IBOutlet var arView: ARView!
+
+    var activeImage: String?
+    var activeModel:String?
+
+    let fetchModel = ["AeroPlaneImage": "toy_car",
+                   "AirCraftImage": "toy_biplane_idle",
+                   "CakeImage": "cake",
+                   "CupSaucerImage": "cup_saucer_set",
+                   "GramoPhoneImage": "gramophone",
+                   "GuitarImage": "fender_stratocaster",
+                   "RadioImage": "tv_retro",
+                   "RedChairImage": "chair_swan",
+                   "RobotImage": "robot_walk_idle",
+                   "ShoeImage": "sneaker_airforce",
+                   "SportShoeImage": "sneaker_pegasustrail",
+                   "TeaPotImage": "teapot",
+                   "ToyImage": "toy_drummer_idle",
+                   "TulipImage": "flower_tulip",
+                   "WateringCanImage": "wateringcan"
+                ]
+
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        imageto3DModel()
+        arView.session.delegate = self
+        //addCoachingOverlay()
+        loadARView()
+    }
+
+    func imageto3DModel() {
+        activeModel = fetchModel[activeImage!]
+        print("Model name is \(String(describing: activeModel))")
+    }
+
+   // MARK: Setup methods
+    func setUpARView() {
+        
+        arView.automaticallyConfigureSession = false
+        let configuration = ARWorldTrackingConfiguration()
+        configuration.planeDetection = [.horizontal, .vertical]
+        configuration.environmentTexturing = .automatic
+        arView.session.run(configuration)
+    }
+
+    func loadARView() {
+        setUpARView()
+        arView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap(recognizer:))))
+    }
+
+   // MARK: Object placement when tapped
+    @objc func handleTap(recognizer: UITapGestureRecognizer) {
+         let location = recognizer.location(in: arView)
+         let results = arView.raycast(from: location, allowing: .estimatedPlane, alignment: .horizontal)
+         if let firstResult = results.first {
+             let anchor = ARAnchor(name: activeModel!, transform: firstResult.worldTransform)
+             arView.session.add(anchor: anchor)
+         }
+         else {
+//             MARK: add popup for no result found
+    print("Unable to find a surface. Try moving to the side or repositioning your phone.")
+         }
+     }
+
+    // MARK: placeObject function
+    func placeObject(named entityName: String, for anchor: ARAnchor) {
+        // MARK: unwrap the ModelEntity properly
+        let modelEntity = try! ModelEntity.loadModel(named: entityName)
+        modelEntity.generateCollisionShapes(recursive: true)
+        arView.installGestures([.all], for: modelEntity)
+        let anchorEntity = AnchorEntity(anchor: anchor)
+        anchorEntity.addChild(modelEntity)
+        arView.scene.addAnchor(anchorEntity)
+    }
+}
+
+extension ARVC: ARSessionDelegate {
+    func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {
+        for anchor in anchors {
+            if let anchorName = anchor.name, anchorName == activeModel! {
+                placeObject(named: anchorName, for: anchor)
+            }
+        }
+    }
+}
+
+
+extension ARVC: ARCoachingOverlayViewDelegate {
+    func addCoachingOverlay() {
+        let coachingOverlay = ARCoachingOverlayView()
+        // rescaling for different orientation if necessary
+        coachingOverlay.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        self.arView.addSubview(coachingOverlay)
+        //setting the goal
+        coachingOverlay.goal = .horizontalPlane
+        coachingOverlay.session = self.arView.session
+        coachingOverlay.delegate = self
+    }
+
+    /*func coachingOverlayViewWillActivate(_ coachingOverlayView: ARCoachingOverlayView) {
+        addCoachingOverlay()
+    }
+    func coachingOverlayViewDidDeactivate(_ coachingOverlayView: ARCoachingOverlayView) {
+        coachingOverlayView.activatesAutomatically = false
+        self.loadARView()
+    }*/
+}
+
