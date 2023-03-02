@@ -30,15 +30,14 @@ class ModelSelectionVC: UIViewController,UICollectionViewDelegate,UICollectionVi
     }
     
     
-    @IBAction func viewInARTapped(_ sender: Any) {
+    @IBAction func viewInARAction(_ sender: Any) {
         
         let arvc = self.storyboard?.instantiateViewController(withIdentifier: "ARVC") as! ARVC
         self.navigationController?.pushViewController(arvc, animated: true)
         arvc.activeImage = selectedImageName
     }
     
-    
-    @IBAction func quickLookTapped(_ sender: Any) {
+    @IBAction func quickLookAction(_ sender: Any) {
         let qlvc = self.storyboard?.instantiateViewController(withIdentifier: "QuickLookVC") as! QuickLookVC
         self.navigationController?.pushViewController(qlvc, animated: true)
         qlvc.activeImage = selectedImageName

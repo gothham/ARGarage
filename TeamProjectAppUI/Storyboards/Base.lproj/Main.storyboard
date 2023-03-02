@@ -30,58 +30,56 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5pp-vY-ynF">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5pp-vY-ynF">
                                 <rect key="frame" x="30" y="185" width="333" height="300"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="dhC-ab-h46"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GUH-xr-JJ6">
-                                <rect key="frame" x="30" y="545" width="333" height="95"/>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="Zeg-Nc-HgJ" userLabel="Stack view">
+                                <rect key="frame" x="30" y="559" width="333" height="45"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0f3-yZ-uxM">
-                                        <rect key="frame" x="8" y="35" width="105" height="25"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v3o-a9-FTI">
+                                        <rect key="frame" x="0.0" y="0.0" width="150.66666666666666" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="kax-Jn-J3o"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="View in AR"/>
+                                        <buttonConfiguration key="configuration" style="gray" image="arkit" catalog="system" title="View in AR" cornerStyle="capsule"/>
                                         <connections>
-                                            <action selector="viewInARTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aEd-uk-cFJ"/>
+                                            <action selector="viewInARAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="igb-JP-Tuw"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8J-9H-LCY">
-                                        <rect key="frame" x="216" y="35" width="109" height="25"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orZ-uQ-ybg">
+                                        <rect key="frame" x="182.66666666666663" y="0.0" width="150.33333333333337" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="HN5-OA-KOj"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="Quick Look"/>
+                                        <buttonConfiguration key="configuration" style="gray" image="rotate.3d" catalog="system" title="Quick Look" cornerStyle="capsule"/>
                                         <connections>
-                                            <action selector="quickLookTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="naM-jt-DGX"/>
+                                            <action selector="quickLookAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5ZJ-N5-0FJ"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="f8J-9H-LCY" firstAttribute="top" secondItem="GUH-xr-JJ6" secondAttribute="top" constant="35" id="FDr-Yw-nxg"/>
-                                    <constraint firstAttribute="trailing" secondItem="f8J-9H-LCY" secondAttribute="trailing" constant="8" id="Olt-NP-t2S"/>
-                                    <constraint firstAttribute="bottom" secondItem="f8J-9H-LCY" secondAttribute="bottom" constant="35" id="aVS-wv-Lgi"/>
-                                    <constraint firstAttribute="bottom" secondItem="0f3-yZ-uxM" secondAttribute="bottom" constant="35" id="jbN-86-tyK"/>
-                                    <constraint firstItem="0f3-yZ-uxM" firstAttribute="leading" secondItem="GUH-xr-JJ6" secondAttribute="leading" constant="8" id="nRD-gr-X9L"/>
-                                    <constraint firstItem="0f3-yZ-uxM" firstAttribute="top" secondItem="GUH-xr-JJ6" secondAttribute="top" constant="35" id="sgv-2L-Sf1"/>
-                                    <constraint firstItem="f8J-9H-LCY" firstAttribute="leading" secondItem="0f3-yZ-uxM" secondAttribute="trailing" constant="103" id="xQ4-fO-8R1"/>
-                                </constraints>
-                            </view>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="GUH-xr-JJ6" firstAttribute="top" secondItem="5pp-vY-ynF" secondAttribute="bottom" constant="60" id="0sX-5e-fai"/>
+                            <constraint firstItem="Zeg-Nc-HgJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="8Hu-qF-IJV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5pp-vY-ynF" secondAttribute="trailing" constant="30" id="8dU-j7-JAi"/>
                             <constraint firstItem="5pp-vY-ynF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="9V2-Zn-pxx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1sN-0d-XbS" secondAttribute="trailing" id="ANN-Wt-cop"/>
+                            <constraint firstItem="Zeg-Nc-HgJ" firstAttribute="top" secondItem="5pp-vY-ynF" secondAttribute="bottom" constant="74" id="NQW-dC-v9I"/>
                             <constraint firstItem="1sN-0d-XbS" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="T40-Cr-rlc"/>
                             <constraint firstItem="5pp-vY-ynF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="V8N-fN-iuQ"/>
-                            <constraint firstItem="GUH-xr-JJ6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="W4d-g6-eqO"/>
-                            <constraint firstItem="1sN-0d-XbS" firstAttribute="top" secondItem="GUH-xr-JJ6" secondAttribute="bottom" constant="28" id="XXf-Kl-M47"/>
                             <constraint firstItem="5pp-vY-ynF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="dDc-Af-LBA"/>
                             <constraint firstItem="1sN-0d-XbS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eDI-tI-QcN"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GUH-xr-JJ6" secondAttribute="trailing" constant="30" id="kZH-3l-j5i"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zeg-Nc-HgJ" secondAttribute="trailing" constant="30" id="jwo-Rf-zMl"/>
+                            <constraint firstItem="1sN-0d-XbS" firstAttribute="top" secondItem="Zeg-Nc-HgJ" secondAttribute="bottom" constant="64" id="mYs-ob-Kp3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Models" id="Mv2-jW-P5m"/>
@@ -92,7 +90,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="979" y="-2"/>
+            <point key="canvasLocation" x="977.86259541984725" y="-2.1126760563380285"/>
         </scene>
         <!--Quick LookVC-->
         <scene sceneID="bLQ-1O-K4L">
@@ -148,6 +146,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="HyP-Td-irt">
                         <rect key="frame" x="0.0" y="59" width="393" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" systemColor="labelColor"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -160,6 +161,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arkit" catalog="system" width="128" height="125"/>
+        <image name="rotate.3d" catalog="system" width="128" height="123"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
