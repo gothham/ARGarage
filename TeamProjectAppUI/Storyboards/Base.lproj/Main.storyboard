@@ -101,15 +101,16 @@
                         <subviews>
                             <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8tl-7h-XZJ">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </sceneKitView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="W2N-fT-3UG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="W2N-fT-3UG" firstAttribute="trailing" secondItem="8tl-7h-XZJ" secondAttribute="trailing" id="C3o-rS-I9S"/>
-                            <constraint firstItem="8tl-7h-XZJ" firstAttribute="top" secondItem="Fii-vM-rUT" secondAttribute="top" id="Vbh-JD-lfp"/>
-                            <constraint firstItem="8tl-7h-XZJ" firstAttribute="leading" secondItem="W2N-fT-3UG" secondAttribute="leading" id="iL4-Pp-gTk"/>
-                            <constraint firstAttribute="bottom" secondItem="8tl-7h-XZJ" secondAttribute="bottom" id="kr7-ig-wOm"/>
+                            <constraint firstItem="8tl-7h-XZJ" firstAttribute="leading" secondItem="W2N-fT-3UG" secondAttribute="leading" id="FmH-Ii-exq"/>
+                            <constraint firstItem="8tl-7h-XZJ" firstAttribute="top" secondItem="Fii-vM-rUT" secondAttribute="top" id="Ts3-pH-tLB"/>
+                            <constraint firstItem="8tl-7h-XZJ" firstAttribute="trailing" secondItem="W2N-fT-3UG" secondAttribute="trailing" id="ik8-Qa-ZgJ"/>
+                            <constraint firstAttribute="bottom" secondItem="8tl-7h-XZJ" secondAttribute="bottom" id="rtE-yj-nu2"/>
                         </constraints>
                     </view>
                     <connections>
