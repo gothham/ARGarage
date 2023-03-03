@@ -43,7 +43,6 @@ class QuickLookVC: UIViewController {
         viewingObject()
     }
     
-//MARK: - Giving name -
     func imageto3DModel() {
         activeModel = fetchModel[activeImage!]
         print("Model name is \(String(describing: activeModel))")
