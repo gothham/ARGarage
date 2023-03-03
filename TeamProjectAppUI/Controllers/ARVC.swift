@@ -79,22 +79,22 @@ class ARVC: UIViewController {
      }
 
     // MARK: placeObject function
-    func placeObject(named entityName: String, for anchor: ARAnchor) {
-        // MARK: unwrap the ModelEntity properly
-        let modelEntity = try! ModelEntity.loadModel(named: entityName)
-        modelEntity.generateCollisionShapes(recursive: true)
-        arView.installGestures([.all], for: modelEntity)
-        let anchorEntity = AnchorEntity(anchor: anchor)
-        anchorEntity.addChild(modelEntity)
-        arView.scene.addAnchor(anchorEntity)
-    }
+//    func placeObject(named entityName: String, for anchor: ARAnchor) {
+//        // MARK: unwrap the ModelEntity properly
+//        let modelEntity = try! ModelEntity.loadModel(named: entityName)
+//        modelEntity.generateCollisionShapes(recursive: true)
+//        arView.installGestures([.all], for: modelEntity)
+//        let anchorEntity = AnchorEntity(anchor: anchor)
+//        anchorEntity.addChild(modelEntity)
+//        arView.scene.addAnchor(anchorEntity)
+//    }
 }
 
 extension ARVC: ARSessionDelegate {
     func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {
         for anchor in anchors {
             if let anchorName = anchor.name, anchorName == activeModel! {
-                placeObject(named: anchorName, for: anchor)
+//                placeObject(named: anchorName, for: anchor)
             }
         }
     }
