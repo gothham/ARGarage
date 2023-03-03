@@ -94,7 +94,7 @@ extension ARVC: ARSessionDelegate {
     func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {
         for anchor in anchors {
             if let anchorName = anchor.name, anchorName == activeModel! {
-//                placeObject(named: anchorName, for: anchor)
+                placeObject(named: anchorName, for: anchor)
             }
         }
     }
