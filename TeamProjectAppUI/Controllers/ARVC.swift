@@ -74,7 +74,8 @@ class ARVC: UIViewController {
          }
          else {
 //             MARK: add popup for no result found
-    print("Unable to find a surface. Try moving to the side or repositioning your phone.")
+//    print("Unable to find a surface. Try moving to the side or repositioning your phone.")
+             unknownlocationAlert()
          }
      }
 
@@ -87,6 +88,14 @@ class ARVC: UIViewController {
         let anchorEntity = AnchorEntity(anchor: anchor)
         anchorEntity.addChild(modelEntity)
         arView.scene.addAnchor(anchorEntity)
+    }
+    
+    func unknownlocationAlert() {
+        let alert = UIAlertController(title: "Detection Failed", message: "Try to move iPhone closer.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Continue", comment: "Default action"), style: .default, handler: { _ in
+        NSLog("The \"OK\" alert occured.")
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
