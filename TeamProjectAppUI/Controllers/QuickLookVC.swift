@@ -52,9 +52,33 @@ class QuickLookVC: UIViewController {
 //MARK: - Viewing Models from the sceneView - 
     func viewingObject (){
         quickLook.scene = SCNScene(named: activeModel!)
+        quickLook.scene?.rootNode.scale = SCNVector3(0.5, 0.5, 0.5)
         quickLook.autoenablesDefaultLighting = true
         quickLook.allowsCameraControl = true
     }
+    
+    // MARK: unwrap the optionals and fix thew errors to center the image
+    
+    /*func centerBoundingBox() {
+        let node = quickLook.scene?.rootNode
+        
+        // Calculate the center of the bounding box
+        let nodeCenter = SCNVector3(
+            x: (nodeBoundingBox.min.x + nodeBoundingBox.max.x) / 2.0,
+            y: (nodeBoundingBox.min.y + nodeBoundingBox.max.y) / 2.0,
+            z: (nodeBoundingBox.min.z + nodeBoundingBox.max.z) / 2.0
+        )
+        
+        // Calculate the offset required to center the node
+        let nodeOffset = SCNVector3(
+            x: -nodeCenter.x,
+            y: -nodeCenter.y,
+            z: -nodeCenter.z
+        )
+        
+        // Apply the offset to the node
+        node!.position = nodeOffset
+    }*/
 }
 
 

@@ -39,7 +39,8 @@ class ARVC: UIViewController {
         super.viewDidLoad()
         imageto3DModel()
         arView.session.delegate = self
-        //addCoachingOverlay()
+        // setting the coaching overlay
+        addCoachingOverlay()
         loadARView()
     }
 
@@ -73,7 +74,8 @@ class ARVC: UIViewController {
          }
          else {
 //             MARK: add popup for no result found
-    print("Unable to find a surface. Try moving to the side or repositioning your phone.")
+//    print("Unable to find a surface. Try moving to the side or repositioning your phone.")
+             unknownlocationAlert()
          }
      }
 
@@ -86,6 +88,14 @@ class ARVC: UIViewController {
         let anchorEntity = AnchorEntity(anchor: anchor)
         anchorEntity.addChild(modelEntity)
         arView.scene.addAnchor(anchorEntity)
+    }
+    
+    func unknownlocationAlert() {
+        let alert = UIAlertController(title: "Detection Failed", message: "Try to move iPhone closer.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Continue", comment: "Default action"), style: .default, handler: { _ in
+        NSLog("The \"OK\" alert occured.")
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
@@ -100,17 +110,26 @@ extension ARVC: ARSessionDelegate {
 }
 
 
-extension ARVC: ARCoachingOverlayViewDelegate {
+extension ARVC {
     func addCoachingOverlay() {
         let coachingOverlay = ARCoachingOverlayView()
-        // rescaling for different orientation if necessary
-        coachingOverlay.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        self.arView.addSubview(coachingOverlay)
-        //setting the goal
+        coachingOverlay.autoresizingMask = [
+          .flexibleWidth, .flexibleHeight
+        ]
+        coachingOverlay.translatesAutoresizingMaskIntoConstraints = false
+        arView.addSubview(coachingOverlay)
+        //Setup contraints to the coachingView
+        NSLayoutConstraint.activate([
+            coachingOverlay.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            coachingOverlay.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            coachingOverlay.topAnchor.constraint(equalTo: view.topAnchor),
+            coachingOverlay.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
         coachingOverlay.goal = .horizontalPlane
-        coachingOverlay.session = self.arView.session
-        coachingOverlay.delegate = self
-    }
+        coachingOverlay.session = arView.session
+        /*Set the delegate for any callbacks
+        coachingOverlay.delegate = self*/
+      }
 
     /*func coachingOverlayViewWillActivate(_ coachingOverlayView: ARCoachingOverlayView) {
         addCoachingOverlay()
