@@ -16,7 +16,6 @@
 		434EBCFF29AF23B200629713 /* toy_car.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 434EBCEC29AF23B200629713 /* toy_car.usdz */; };
 		434EBD0129AF23B200629713 /* sneaker_airforce.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 434EBCEE29AF23B200629713 /* sneaker_airforce.usdz */; };
 		434EBD0229AF23B200629713 /* gramophone.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 434EBCEF29AF23B200629713 /* gramophone.usdz */; };
-		434EBD0329AF23B200629713 /* robot_walk_idle.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 434EBCF029AF23B200629713 /* robot_walk_idle.usdz */; };
 		434EBD0429AF23B200629713 /* toy_biplane_idle.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 434EBCF129AF23B200629713 /* toy_biplane_idle.usdz */; };
 		434EBD0529AF23B200629713 /* cake.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 434EBCF229AF23B200629713 /* cake.usdz */; };
 		434EBD0829AF23B200629713 /* sneaker_pegasustrail.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 434EBCF529AF23B200629713 /* sneaker_pegasustrail.usdz */; };
@@ -45,6 +44,8 @@
 		55DA608529B9E94A0014CBE6 /* Roman_Chair.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 55DA607E29B9E94A0014CBE6 /* Roman_Chair.usdz */; };
 		55DA608629B9E94A0014CBE6 /* Office_Chair.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 55DA607F29B9E94A0014CBE6 /* Office_Chair.usdz */; };
 		55DA608829B9E9A50014CBE6 /* Table_Lamp.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 55DA608729B9E9A50014CBE6 /* Table_Lamp.usdz */; };
+		55DA608B29B9F4BA0014CBE6 /* MyModel.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 55DA608A29B9F4BA0014CBE6 /* MyModel.rcproject */; };
+		55DA60AC29B9FDD70014CBE6 /* robot_walk_idle.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 55DA60AB29B9FDD70014CBE6 /* robot_walk_idle.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,7 +58,6 @@
 		434EBCEC29AF23B200629713 /* toy_car.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = toy_car.usdz; sourceTree = "<group>"; };
 		434EBCEE29AF23B200629713 /* sneaker_airforce.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = sneaker_airforce.usdz; sourceTree = "<group>"; };
 		434EBCEF29AF23B200629713 /* gramophone.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = gramophone.usdz; sourceTree = "<group>"; };
-		434EBCF029AF23B200629713 /* robot_walk_idle.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = robot_walk_idle.usdz; sourceTree = "<group>"; };
 		434EBCF129AF23B200629713 /* toy_biplane_idle.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = toy_biplane_idle.usdz; sourceTree = "<group>"; };
 		434EBCF229AF23B200629713 /* cake.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = cake.usdz; sourceTree = "<group>"; };
 		434EBCF529AF23B200629713 /* sneaker_pegasustrail.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = sneaker_pegasustrail.usdz; sourceTree = "<group>"; };
@@ -88,6 +88,8 @@
 		55DA607E29B9E94A0014CBE6 /* Roman_Chair.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Roman_Chair.usdz; sourceTree = "<group>"; };
 		55DA607F29B9E94A0014CBE6 /* Office_Chair.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Office_Chair.usdz; sourceTree = "<group>"; };
 		55DA608729B9E9A50014CBE6 /* Table_Lamp.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Table_Lamp.usdz; sourceTree = "<group>"; };
+		55DA608A29B9F4BA0014CBE6 /* MyModel.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = MyModel.rcproject; sourceTree = "<group>"; };
+		55DA60AB29B9FDD70014CBE6 /* robot_walk_idle.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = robot_walk_idle.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 		43B2A1AA29A47CDE00F59EB8 /* TeamProjectAppUI */ = {
 			isa = PBXGroup;
 			children = (
+				55DA608A29B9F4BA0014CBE6 /* MyModel.rcproject */,
 				434EBCE629AF23B200629713 /* Models */,
 				43BB968929A7966E0096CD80 /* Storyboards */,
 				43BB968729A796090096CD80 /* Controllers */,
@@ -191,6 +194,7 @@
 		55DA608929B9E9C50014CBE6 /* PrototypeModels */ = {
 			isa = PBXGroup;
 			children = (
+				55DA60AB29B9FDD70014CBE6 /* robot_walk_idle.usdz */,
 				434EBCE729AF23B200629713 /* flower_tulip.usdz */,
 				434EBCE829AF23B200629713 /* wateringcan.usdz */,
 				55DA608729B9E9A50014CBE6 /* Table_Lamp.usdz */,
@@ -200,7 +204,6 @@
 				434EBCEC29AF23B200629713 /* toy_car.usdz */,
 				434EBCEE29AF23B200629713 /* sneaker_airforce.usdz */,
 				434EBCEF29AF23B200629713 /* gramophone.usdz */,
-				434EBCF029AF23B200629713 /* robot_walk_idle.usdz */,
 				434EBCF129AF23B200629713 /* toy_biplane_idle.usdz */,
 				434EBCF229AF23B200629713 /* cake.usdz */,
 				434EBCF529AF23B200629713 /* sneaker_pegasustrail.usdz */,
@@ -294,10 +297,10 @@
 				434EBCFD29AF23B200629713 /* fender_stratocaster.usdz in Resources */,
 				55DA608229B9E94A0014CBE6 /* 3_Seated_Sofa.usdz in Resources */,
 				55DA607829B9E51B0014CBE6 /* White_Sofa.usdz in Resources */,
+				55DA60AC29B9FDD70014CBE6 /* robot_walk_idle.usdz in Resources */,
 				434EBD0229AF23B200629713 /* gramophone.usdz in Resources */,
 				55DA607529B9E51B0014CBE6 /* White_Living_Room.usdz in Resources */,
 				55DA607629B9E51B0014CBE6 /* Brown_Sofa.usdz in Resources */,
-				434EBD0329AF23B200629713 /* robot_walk_idle.usdz in Resources */,
 				434EBCFC29AF23B200629713 /* chair_swan.usdz in Resources */,
 				434EBCFF29AF23B200629713 /* toy_car.usdz in Resources */,
 				55DA608429B9E94A0014CBE6 /* Kid_rocking_chair.usdz in Resources */,
@@ -313,6 +316,7 @@
 			files = (
 				43BB968429A78D7A0096CD80 /* ARVC.swift in Sources */,
 				434EBCE529AF17C600629713 /* QuickLookVC.swift in Sources */,
+				55DA608B29B9F4BA0014CBE6 /* MyModel.rcproject in Sources */,
 				43B2A1B029A47CDE00F59EB8 /* ModelSelectionVC.swift in Sources */,
 				43B2A1C729A499DC00F59EB8 /* MyCollectionViewCell.swift in Sources */,
 				43B2A1AC29A47CDE00F59EB8 /* AppDelegate.swift in Sources */,

@@ -45,7 +45,7 @@ class ARVC: UIViewController {
     }
 
     func loadARView() {
-        alertBox(title: "Place Object", message: "Tap a location to place the object.")
+        alertBox(title: "Place Object", message: "Tap a location to place the object and scale down the object.")
         setUpARView()
         arView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap(recognizer:))))
     }

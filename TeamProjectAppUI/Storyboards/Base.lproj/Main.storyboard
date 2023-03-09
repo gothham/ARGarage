@@ -38,10 +38,10 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleAspectFit" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="Zeg-Nc-HgJ" userLabel="Stack view">
-                                <rect key="frame" x="46" y="573" width="301.33333333333331" height="45"/>
+                                <rect key="frame" x="44.666666666666657" y="573" width="304" height="45"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v3o-a9-FTI">
-                                        <rect key="frame" x="0.0" y="0.0" width="134.66666666666666" height="45"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="136" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="kax-Jn-J3o"/>
                                         </constraints>
@@ -52,12 +52,12 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orZ-uQ-ybg">
-                                        <rect key="frame" x="166.66666666666669" y="0.0" width="134.66666666666669" height="45"/>
+                                        <rect key="frame" x="168" y="0.0" width="136" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="HN5-OA-KOj"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" image="rotate.3d" catalog="system" title="Quick Look" cornerStyle="capsule"/>
+                                        <buttonConfiguration key="configuration" style="gray" image="scale.3d" catalog="system" title="Quick Look" cornerStyle="capsule"/>
                                         <connections>
                                             <action selector="quickLookAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5ZJ-N5-0FJ"/>
                                         </connections>
@@ -162,7 +162,7 @@
     </scenes>
     <resources>
         <image name="arkit" catalog="system" width="128" height="125"/>
-        <image name="rotate.3d" catalog="system" width="128" height="123"/>
+        <image name="scale.3d" catalog="system" width="128" height="109"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
