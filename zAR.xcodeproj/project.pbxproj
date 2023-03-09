@@ -32,6 +32,19 @@
 		43B2A1C729A499DC00F59EB8 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B2A1C529A499DC00F59EB8 /* MyCollectionViewCell.swift */; };
 		43B2A1C829A499DC00F59EB8 /* MyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43B2A1C629A499DC00F59EB8 /* MyCollectionViewCell.xib */; };
 		43BB968429A78D7A0096CD80 /* ARVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BB968329A78D7A0096CD80 /* ARVC.swift */; };
+		55DA607429B9E51B0014CBE6 /* Leather_Sofa.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 55DA606E29B9E51A0014CBE6 /* Leather_Sofa.usdz */; };
+		55DA607529B9E51B0014CBE6 /* White_Living_Room.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 55DA606F29B9E51A0014CBE6 /* White_Living_Room.usdz */; };
+		55DA607629B9E51B0014CBE6 /* Brown_Sofa.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 55DA607029B9E51A0014CBE6 /* Brown_Sofa.usdz */; };
+		55DA607729B9E51B0014CBE6 /* Conference_Chair.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 55DA607129B9E51A0014CBE6 /* Conference_Chair.usdz */; };
+		55DA607829B9E51B0014CBE6 /* White_Sofa.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 55DA607229B9E51B0014CBE6 /* White_Sofa.usdz */; };
+		55DA608029B9E94A0014CBE6 /* Table.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 55DA607929B9E9490014CBE6 /* Table.usdz */; };
+		55DA608129B9E94A0014CBE6 /* Viena_Park_Bench.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 55DA607A29B9E9490014CBE6 /* Viena_Park_Bench.usdz */; };
+		55DA608229B9E94A0014CBE6 /* 3_Seated_Sofa.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 55DA607B29B9E9490014CBE6 /* 3_Seated_Sofa.usdz */; };
+		55DA608329B9E94A0014CBE6 /* Old_Sofa.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 55DA607C29B9E9490014CBE6 /* Old_Sofa.usdz */; };
+		55DA608429B9E94A0014CBE6 /* Kid_rocking_chair.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 55DA607D29B9E9490014CBE6 /* Kid_rocking_chair.usdz */; };
+		55DA608529B9E94A0014CBE6 /* Roman_Chair.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 55DA607E29B9E94A0014CBE6 /* Roman_Chair.usdz */; };
+		55DA608629B9E94A0014CBE6 /* Office_Chair.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 55DA607F29B9E94A0014CBE6 /* Office_Chair.usdz */; };
+		55DA608829B9E9A50014CBE6 /* Table_Lamp.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 55DA608729B9E9A50014CBE6 /* Table_Lamp.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +75,19 @@
 		43B2A1C529A499DC00F59EB8 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		43B2A1C629A499DC00F59EB8 /* MyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionViewCell.xib; sourceTree = "<group>"; };
 		43BB968329A78D7A0096CD80 /* ARVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARVC.swift; sourceTree = "<group>"; };
+		55DA606E29B9E51A0014CBE6 /* Leather_Sofa.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Leather_Sofa.usdz; sourceTree = "<group>"; };
+		55DA606F29B9E51A0014CBE6 /* White_Living_Room.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = White_Living_Room.usdz; sourceTree = "<group>"; };
+		55DA607029B9E51A0014CBE6 /* Brown_Sofa.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Brown_Sofa.usdz; sourceTree = "<group>"; };
+		55DA607129B9E51A0014CBE6 /* Conference_Chair.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Conference_Chair.usdz; sourceTree = "<group>"; };
+		55DA607229B9E51B0014CBE6 /* White_Sofa.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = White_Sofa.usdz; sourceTree = "<group>"; };
+		55DA607929B9E9490014CBE6 /* Table.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Table.usdz; sourceTree = "<group>"; };
+		55DA607A29B9E9490014CBE6 /* Viena_Park_Bench.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Viena_Park_Bench.usdz; sourceTree = "<group>"; };
+		55DA607B29B9E9490014CBE6 /* 3_Seated_Sofa.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = 3_Seated_Sofa.usdz; sourceTree = "<group>"; };
+		55DA607C29B9E9490014CBE6 /* Old_Sofa.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Old_Sofa.usdz; sourceTree = "<group>"; };
+		55DA607D29B9E9490014CBE6 /* Kid_rocking_chair.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Kid_rocking_chair.usdz; sourceTree = "<group>"; };
+		55DA607E29B9E94A0014CBE6 /* Roman_Chair.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Roman_Chair.usdz; sourceTree = "<group>"; };
+		55DA607F29B9E94A0014CBE6 /* Office_Chair.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Office_Chair.usdz; sourceTree = "<group>"; };
+		55DA608729B9E9A50014CBE6 /* Table_Lamp.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Table_Lamp.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,21 +104,8 @@
 		434EBCE629AF23B200629713 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				434EBCE729AF23B200629713 /* flower_tulip.usdz */,
-				434EBCE829AF23B200629713 /* wateringcan.usdz */,
-				434EBCE929AF23B200629713 /* chair_swan.usdz */,
-				434EBCEA29AF23B200629713 /* fender_stratocaster.usdz */,
-				434EBCEB29AF23B200629713 /* teapot.usdz */,
-				434EBCEC29AF23B200629713 /* toy_car.usdz */,
-				434EBCEE29AF23B200629713 /* sneaker_airforce.usdz */,
-				434EBCEF29AF23B200629713 /* gramophone.usdz */,
-				434EBCF029AF23B200629713 /* robot_walk_idle.usdz */,
-				434EBCF129AF23B200629713 /* toy_biplane_idle.usdz */,
-				434EBCF229AF23B200629713 /* cake.usdz */,
-				434EBCF529AF23B200629713 /* sneaker_pegasustrail.usdz */,
-				434EBCF629AF23B200629713 /* toy_drummer_idle.usdz */,
-				434EBCF829AF23B200629713 /* tv_retro.usdz */,
-				434EBCF929AF23B200629713 /* cup_saucer_set.usdz */,
+				55DA606029B9E4000014CBE6 /* Furnitures */,
+				55DA608929B9E9C50014CBE6 /* PrototypeModels */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -156,6 +169,48 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		55DA606029B9E4000014CBE6 /* Furnitures */ = {
+			isa = PBXGroup;
+			children = (
+				55DA607B29B9E9490014CBE6 /* 3_Seated_Sofa.usdz */,
+				55DA607D29B9E9490014CBE6 /* Kid_rocking_chair.usdz */,
+				55DA607F29B9E94A0014CBE6 /* Office_Chair.usdz */,
+				55DA607C29B9E9490014CBE6 /* Old_Sofa.usdz */,
+				55DA607E29B9E94A0014CBE6 /* Roman_Chair.usdz */,
+				55DA607929B9E9490014CBE6 /* Table.usdz */,
+				55DA607A29B9E9490014CBE6 /* Viena_Park_Bench.usdz */,
+				55DA607129B9E51A0014CBE6 /* Conference_Chair.usdz */,
+				55DA607229B9E51B0014CBE6 /* White_Sofa.usdz */,
+				55DA607029B9E51A0014CBE6 /* Brown_Sofa.usdz */,
+				55DA606E29B9E51A0014CBE6 /* Leather_Sofa.usdz */,
+				55DA606F29B9E51A0014CBE6 /* White_Living_Room.usdz */,
+			);
+			path = Furnitures;
+			sourceTree = "<group>";
+		};
+		55DA608929B9E9C50014CBE6 /* PrototypeModels */ = {
+			isa = PBXGroup;
+			children = (
+				434EBCE729AF23B200629713 /* flower_tulip.usdz */,
+				434EBCE829AF23B200629713 /* wateringcan.usdz */,
+				55DA608729B9E9A50014CBE6 /* Table_Lamp.usdz */,
+				434EBCE929AF23B200629713 /* chair_swan.usdz */,
+				434EBCEA29AF23B200629713 /* fender_stratocaster.usdz */,
+				434EBCEB29AF23B200629713 /* teapot.usdz */,
+				434EBCEC29AF23B200629713 /* toy_car.usdz */,
+				434EBCEE29AF23B200629713 /* sneaker_airforce.usdz */,
+				434EBCEF29AF23B200629713 /* gramophone.usdz */,
+				434EBCF029AF23B200629713 /* robot_walk_idle.usdz */,
+				434EBCF129AF23B200629713 /* toy_biplane_idle.usdz */,
+				434EBCF229AF23B200629713 /* cake.usdz */,
+				434EBCF529AF23B200629713 /* sneaker_pegasustrail.usdz */,
+				434EBCF629AF23B200629713 /* toy_drummer_idle.usdz */,
+				434EBCF829AF23B200629713 /* tv_retro.usdz */,
+				434EBCF929AF23B200629713 /* cup_saucer_set.usdz */,
+			);
+			path = PrototypeModels;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -216,23 +271,36 @@
 			files = (
 				434EBCFE29AF23B200629713 /* teapot.usdz in Resources */,
 				434EBD0529AF23B200629713 /* cake.usdz in Resources */,
+				55DA607429B9E51B0014CBE6 /* Leather_Sofa.usdz in Resources */,
+				55DA608029B9E94A0014CBE6 /* Table.usdz in Resources */,
 				434EBD0429AF23B200629713 /* toy_biplane_idle.usdz in Resources */,
+				55DA608629B9E94A0014CBE6 /* Office_Chair.usdz in Resources */,
+				55DA608529B9E94A0014CBE6 /* Roman_Chair.usdz in Resources */,
 				434EBD0A29AF23B200629713 /* tv_retro.usdz in Resources */,
 				434EBD0B29AF23B200629713 /* cup_saucer_set.usdz in Resources */,
 				43B2A1C829A499DC00F59EB8 /* MyCollectionViewCell.xib in Resources */,
 				43B2A1B829A47CDF00F59EB8 /* LaunchScreen.storyboard in Resources */,
 				43B2A1B529A47CDF00F59EB8 /* Assets.xcassets in Resources */,
+				55DA608129B9E94A0014CBE6 /* Viena_Park_Bench.usdz in Resources */,
 				434EBD0129AF23B200629713 /* sneaker_airforce.usdz in Resources */,
 				434EBCFB29AF23B200629713 /* wateringcan.usdz in Resources */,
 				434EBD0929AF23B200629713 /* toy_drummer_idle.usdz in Resources */,
 				434EBD0829AF23B200629713 /* sneaker_pegasustrail.usdz in Resources */,
 				434EBCFA29AF23B200629713 /* flower_tulip.usdz in Resources */,
+				55DA608329B9E94A0014CBE6 /* Old_Sofa.usdz in Resources */,
 				43B2A1B329A47CDE00F59EB8 /* Main.storyboard in Resources */,
+				55DA608829B9E9A50014CBE6 /* Table_Lamp.usdz in Resources */,
+				55DA607729B9E51B0014CBE6 /* Conference_Chair.usdz in Resources */,
 				434EBCFD29AF23B200629713 /* fender_stratocaster.usdz in Resources */,
+				55DA608229B9E94A0014CBE6 /* 3_Seated_Sofa.usdz in Resources */,
+				55DA607829B9E51B0014CBE6 /* White_Sofa.usdz in Resources */,
 				434EBD0229AF23B200629713 /* gramophone.usdz in Resources */,
+				55DA607529B9E51B0014CBE6 /* White_Living_Room.usdz in Resources */,
+				55DA607629B9E51B0014CBE6 /* Brown_Sofa.usdz in Resources */,
 				434EBD0329AF23B200629713 /* robot_walk_idle.usdz in Resources */,
 				434EBCFC29AF23B200629713 /* chair_swan.usdz in Resources */,
 				434EBCFF29AF23B200629713 /* toy_car.usdz in Resources */,
+				55DA608429B9E94A0014CBE6 /* Kid_rocking_chair.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
