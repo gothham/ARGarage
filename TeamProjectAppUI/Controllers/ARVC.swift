@@ -44,6 +44,11 @@ class ARVC: UIViewController {
         loadARView()
     }
 
+    func loadARView() {
+        alertBox(title: "Place Object", message: "Tap a location to place the object.")
+        setUpARView()
+        arView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap(recognizer:))))
+    }
     func imageto3DModel() {
         activeModel = fetchModel[activeImage!]
         print("Model name is \(String(describing: activeModel))")
@@ -59,10 +64,7 @@ class ARVC: UIViewController {
         arView.session.run(configuration)
     }
 
-    func loadARView() {
-        setUpARView()
-        arView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap(recognizer:))))
-    }
+   
 
    // MARK: Object placement when tapped
     @objc func handleTap(recognizer: UITapGestureRecognizer) {
@@ -75,7 +77,7 @@ class ARVC: UIViewController {
          else {
 //             MARK: add popup for no result found
 //    print("Unable to find a surface. Try moving to the side or repositioning your phone.")
-             unknownlocationAlert()
+             alertBox(title: "Detection Failed", message: "Try to move iPhone closer.")
          }
      }
 
@@ -90,8 +92,8 @@ class ARVC: UIViewController {
         arView.scene.addAnchor(anchorEntity)
     }
     
-    func unknownlocationAlert() {
-        let alert = UIAlertController(title: "Detection Failed", message: "Try to move iPhone closer.", preferredStyle: .alert)
+    func alertBox(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: NSLocalizedString("Continue", comment: "Default action"), style: .default, handler: { _ in
         NSLog("The \"OK\" alert occured.")
         }))
