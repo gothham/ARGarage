@@ -75,8 +75,7 @@ class ARVC: UIViewController {
              arView.session.add(anchor: anchor)
          }
          else {
-//             MARK: add popup for no result found
-//    print("Unable to find a surface. Try moving to the side or repositioning your phone.")
+             // MARK: add popup for no result found
              alertBox(title: "Detection Failed", message: "Try to move iPhone closer.")
          }
      }
