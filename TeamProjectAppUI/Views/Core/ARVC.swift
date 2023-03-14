@@ -86,9 +86,9 @@ class ARVC: UIViewController {
         let modelEntity = try! ModelEntity.loadModel(named: entityName)
         modelEntity.generateCollisionShapes(recursive: true)
         arView.installGestures([.all], for: modelEntity)
-        let anchorEntity = AnchorEntity(anchor: anchor)
-        anchorEntity.addChild(modelEntity)
-        arView.scene.addAnchor(anchorEntity)
+//        let anchorEntity = AnchorEntity(anchor: anchor)
+//        anchorEntity.addChild(modelEntity)
+//        arView.scene.addAnchor(anchorEntity)
     }
     
     func alertBox(title: String, message: String) {

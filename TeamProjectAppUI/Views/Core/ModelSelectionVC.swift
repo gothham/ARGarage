@@ -26,9 +26,15 @@ class ModelSelectionVC: UIViewController,UICollectionViewDelegate,UICollectionVi
         collectionView.delegate     = self
         collectionView.dataSource   = self
         collectionView.register(MyCollectionViewCell.nib() , forCellWithReuseIdentifier: MyCollectionViewCell.identifier)
-        
+        customNavBar()
     }
     
+    
+    @IBAction func didTapQuickStartAction(_ sender: Any) {
+        let vc = QuickStartVC()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
+    }
     
     @IBAction func viewInARAction(_ sender: Any) {
         
@@ -115,3 +121,14 @@ struct Model {
     var imageName : String
 }
  
+////  By gotham
+// for custom navbar
+
+extension ModelSelectionVC {
+    func customNavBar() {
+        let titleLabel = UILabel()
+        titleLabel.text = "Models"
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 32)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: titleLabel)
+    }
+}

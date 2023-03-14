@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Models-->
+        <!--Model SelectionVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ModelSelectionVC" customModule="zAR" customModuleProvider="target" sceneMemberID="viewController">
@@ -31,12 +31,9 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5pp-vY-ynF">
-                                <rect key="frame" x="30" y="185" width="333" height="300"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5pp-vY-ynF">
+                                <rect key="frame" x="23.666666666666657" y="117" width="345.66666666666674" height="409"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="dhC-ab-h46"/>
-                                </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleAspectFit" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="Zeg-Nc-HgJ" userLabel="Stack view">
                                 <rect key="frame" x="44.666666666666657" y="573" width="304" height="45"/>
@@ -71,18 +68,25 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Zeg-Nc-HgJ" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0528169" id="7wS-V3-5LE"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5pp-vY-ynF" secondAttribute="trailing" constant="30" id="8dU-j7-JAi"/>
-                            <constraint firstItem="5pp-vY-ynF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="9V2-Zn-pxx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1sN-0d-XbS" secondAttribute="trailing" id="ANN-Wt-cop"/>
+                            <constraint firstItem="Zeg-Nc-HgJ" firstAttribute="top" secondItem="5pp-vY-ynF" secondAttribute="bottom" constant="47" id="C6e-XO-UMf"/>
+                            <constraint firstItem="5pp-vY-ynF" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.88" id="NWd-xU-1f9"/>
                             <constraint firstItem="1sN-0d-XbS" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="T40-Cr-rlc"/>
                             <constraint firstItem="5pp-vY-ynF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="V8N-fN-iuQ"/>
-                            <constraint firstItem="5pp-vY-ynF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="dDc-Af-LBA"/>
                             <constraint firstItem="1sN-0d-XbS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eDI-tI-QcN"/>
+                            <constraint firstItem="5pp-vY-ynF" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.48" id="htL-Rl-7En"/>
                             <constraint firstItem="1sN-0d-XbS" firstAttribute="top" secondItem="Zeg-Nc-HgJ" secondAttribute="bottom" constant="50" id="mzt-M2-XhX"/>
                             <constraint firstItem="Zeg-Nc-HgJ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="upM-PD-bpU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Models" id="Mv2-jW-P5m"/>
+                    <navigationItem key="navigationItem" id="Mv2-jW-P5m">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="lightbulb" catalog="system" style="plain" id="KcV-8t-Iuf">
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <action selector="didTapQuickStartAction:" destination="BYZ-38-t0r" id="i0b-r8-nNM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="1sN-0d-XbS" id="UMJ-SZ-19N"/>
                         <outlet property="imageView" destination="5pp-vY-ynF" id="EDt-2d-NIr"/>
@@ -168,17 +172,17 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="393" height="393"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhn-3M-JDc">
-                                                    <rect key="frame" x="0.0" y="390" width="287" height="165"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VfF-B6-xMh">
                                                     <rect key="frame" x="213" y="522" width="180" height="119"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhn-3M-JDc">
+                                                    <rect key="frame" x="0.0" y="390" width="287" height="165"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -245,8 +249,8 @@
             <objects>
                 <navigationController storyboardIdentifier="HomeNC" automaticallyAdjustsScrollViewInsets="NO" id="uEJ-mR-3HG" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="HyP-Td-irt">
-                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HyP-Td-irt">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" systemColor="labelColor"/>
@@ -264,6 +268,7 @@
     </scenes>
     <resources>
         <image name="arkit" catalog="system" width="128" height="125"/>
+        <image name="lightbulb" catalog="system" width="92" height="128"/>
         <image name="scale.3d" catalog="system" width="128" height="109"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -50,6 +50,11 @@
 		55DA60B529BB2FE30014CBE6 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DA60B429BB2FE30014CBE6 /* UIView+Extension.swift */; };
 		55DA60B829BB326E0014CBE6 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DA60B729BB326E0014CBE6 /* OnboardingSlide.swift */; };
 		55DA60BA29BB40250014CBE6 /* OnboardingCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DA60B929BB40250014CBE6 /* OnboardingCVCell.swift */; };
+		55FD8F1529C07BE200C87605 /* QuickStartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FD8F1329C07BE200C87605 /* QuickStartVC.swift */; };
+		55FD8F1629C07BE200C87605 /* QuickStartVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55FD8F1429C07BE200C87605 /* QuickStartVC.xib */; };
+		55FD8F1A29C07F1700C87605 /* GestureCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FD8F1829C07F1700C87605 /* GestureCollectionViewCell.swift */; };
+		55FD8F1B29C07F1700C87605 /* GestureCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55FD8F1929C07F1700C87605 /* GestureCollectionViewCell.xib */; };
+		55FD8F1D29C0837500C87605 /* Gestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FD8F1C29C0837500C87605 /* Gestures.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +103,11 @@
 		55DA60B429BB2FE30014CBE6 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		55DA60B729BB326E0014CBE6 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
 		55DA60B929BB40250014CBE6 /* OnboardingCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCVCell.swift; sourceTree = "<group>"; };
+		55FD8F1329C07BE200C87605 /* QuickStartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickStartVC.swift; sourceTree = "<group>"; };
+		55FD8F1429C07BE200C87605 /* QuickStartVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuickStartVC.xib; sourceTree = "<group>"; };
+		55FD8F1829C07F1700C87605 /* GestureCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureCollectionViewCell.swift; sourceTree = "<group>"; };
+		55FD8F1929C07F1700C87605 /* GestureCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GestureCollectionViewCell.xib; sourceTree = "<group>"; };
+		55FD8F1C29C0837500C87605 /* Gestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gestures.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,14 +149,14 @@
 		43B2A1AA29A47CDE00F59EB8 /* TeamProjectAppUI */ = {
 			isa = PBXGroup;
 			children = (
+				55FD8F1F29C0894B00C87605 /* DelegateCore */,
 				55DA60B329BB2FBC0014CBE6 /* Extensions */,
 				55DA608A29B9F4BA0014CBE6 /* MyModel.rcproject */,
+				55DA60B629BB32310014CBE6 /* Storyboard */,
 				43BB968929A7966E0096CD80 /* Views */,
 				43BB968729A796090096CD80 /* Models */,
 				43B2A1C029A4999F00F59EB8 /* CollectionCell */,
 				434EBCE629AF23B200629713 /* AssestModels */,
-				43B2A1AD29A47CDE00F59EB8 /* SceneDelegate.swift */,
-				43B2A1AB29A47CDE00F59EB8 /* AppDelegate.swift */,
 				43B2A1B429A47CDF00F59EB8 /* Assets.xcassets */,
 				43B2A1B929A47CDF00F59EB8 /* Info.plist */,
 			);
@@ -166,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				55DA60B729BB326E0014CBE6 /* OnboardingSlide.swift */,
+				55FD8F1C29C0837500C87605 /* Gestures.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -173,9 +184,9 @@
 		43BB968929A7966E0096CD80 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				55FD8F1029C073B100C87605 /* QuickStart */,
 				55DA60B229BB2FAB0014CBE6 /* Core */,
 				55DA60AF29BB07F10014CBE6 /* Onboarding */,
-				55DA60B629BB32310014CBE6 /* Storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -258,6 +269,42 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
+		55FD8F1029C073B100C87605 /* QuickStart */ = {
+			isa = PBXGroup;
+			children = (
+				55FD8F1729C07D9400C87605 /* QuickStartCollectionCell */,
+				55FD8F1E29C0890D00C87605 /* QuickStartCore */,
+			);
+			path = QuickStart;
+			sourceTree = "<group>";
+		};
+		55FD8F1729C07D9400C87605 /* QuickStartCollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				55FD8F1829C07F1700C87605 /* GestureCollectionViewCell.swift */,
+				55FD8F1929C07F1700C87605 /* GestureCollectionViewCell.xib */,
+			);
+			path = QuickStartCollectionCell;
+			sourceTree = "<group>";
+		};
+		55FD8F1E29C0890D00C87605 /* QuickStartCore */ = {
+			isa = PBXGroup;
+			children = (
+				55FD8F1329C07BE200C87605 /* QuickStartVC.swift */,
+				55FD8F1429C07BE200C87605 /* QuickStartVC.xib */,
+			);
+			path = QuickStartCore;
+			sourceTree = "<group>";
+		};
+		55FD8F1F29C0894B00C87605 /* DelegateCore */ = {
+			isa = PBXGroup;
+			children = (
+				43B2A1AD29A47CDE00F59EB8 /* SceneDelegate.swift */,
+				43B2A1AB29A47CDE00F59EB8 /* AppDelegate.swift */,
+			);
+			path = DelegateCore;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -316,6 +363,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55FD8F1B29C07F1700C87605 /* GestureCollectionViewCell.xib in Resources */,
 				434EBCFE29AF23B200629713 /* teapot.usdz in Resources */,
 				434EBD0529AF23B200629713 /* cake.usdz in Resources */,
 				55DA607429B9E51B0014CBE6 /* Leather_Sofa.usdz in Resources */,
@@ -345,6 +393,7 @@
 				434EBD0229AF23B200629713 /* gramophone.usdz in Resources */,
 				55DA607529B9E51B0014CBE6 /* White_Living_Room.usdz in Resources */,
 				55DA607629B9E51B0014CBE6 /* Brown_Sofa.usdz in Resources */,
+				55FD8F1629C07BE200C87605 /* QuickStartVC.xib in Resources */,
 				434EBCFC29AF23B200629713 /* chair_swan.usdz in Resources */,
 				434EBCFF29AF23B200629713 /* toy_car.usdz in Resources */,
 				55DA608429B9E94A0014CBE6 /* Kid_rocking_chair.usdz in Resources */,
@@ -363,10 +412,13 @@
 				55DA60B129BB08250014CBE6 /* OnboardingVC.swift in Sources */,
 				434EBCE529AF17C600629713 /* QuickLookVC.swift in Sources */,
 				55DA60B529BB2FE30014CBE6 /* UIView+Extension.swift in Sources */,
+				55FD8F1D29C0837500C87605 /* Gestures.swift in Sources */,
+				55FD8F1529C07BE200C87605 /* QuickStartVC.swift in Sources */,
 				55DA608B29B9F4BA0014CBE6 /* MyModel.rcproject in Sources */,
 				43B2A1B029A47CDE00F59EB8 /* ModelSelectionVC.swift in Sources */,
 				43B2A1C729A499DC00F59EB8 /* MyCollectionViewCell.swift in Sources */,
 				43B2A1AC29A47CDE00F59EB8 /* AppDelegate.swift in Sources */,
+				55FD8F1A29C07F1700C87605 /* GestureCollectionViewCell.swift in Sources */,
 				43B2A1AE29A47CDE00F59EB8 /* SceneDelegate.swift in Sources */,
 				55DA60BA29BB40250014CBE6 /* OnboardingCVCell.swift in Sources */,
 			);
