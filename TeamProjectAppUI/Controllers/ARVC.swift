@@ -33,8 +33,6 @@ class ARVC: UIViewController {
                    "TulipImage": "flower_tulip",
                    "WateringCanImage": "wateringcan"
                 ]
-
-
     override func viewDidLoad() {
         super.viewDidLoad()
         imageto3DModel()

@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Models-->
+        <!--Model SelectionVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ModelSelectionVC" customModule="zAR" customModuleProvider="target" sceneMemberID="viewController">
@@ -31,33 +31,33 @@
                                 <cells/>
                             </collectionView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5pp-vY-ynF">
-                                <rect key="frame" x="30" y="185" width="333" height="300"/>
+                                <rect key="frame" x="30" y="133" width="333" height="300"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="dhC-ab-h46"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleAspectFit" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="Zeg-Nc-HgJ" userLabel="Stack view">
-                                <rect key="frame" x="46" y="573" width="301.33333333333331" height="45"/>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="Zeg-Nc-HgJ">
+                                <rect key="frame" x="30" y="523" width="333" height="45"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v3o-a9-FTI">
-                                        <rect key="frame" x="0.0" y="0.0" width="134.66666666666666" height="45"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="150.66666666666666" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="kax-Jn-J3o"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" image="arkit" catalog="system" title="View in AR" cornerStyle="capsule"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="View in AR" cornerStyle="capsule"/>
                                         <connections>
                                             <action selector="viewInARAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="igb-JP-Tuw"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orZ-uQ-ybg">
-                                        <rect key="frame" x="166.66666666666669" y="0.0" width="134.66666666666669" height="45"/>
+                                        <rect key="frame" x="182.66666666666663" y="0.0" width="150.33333333333337" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="HN5-OA-KOj"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" image="rotate.3d" catalog="system" title="Quick Look" cornerStyle="capsule"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Quick Look" cornerStyle="capsule"/>
                                         <connections>
                                             <action selector="quickLookAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5ZJ-N5-0FJ"/>
                                         </connections>
@@ -77,11 +77,13 @@
                             <constraint firstItem="5pp-vY-ynF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="V8N-fN-iuQ"/>
                             <constraint firstItem="5pp-vY-ynF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="dDc-Af-LBA"/>
                             <constraint firstItem="1sN-0d-XbS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eDI-tI-QcN"/>
-                            <constraint firstItem="1sN-0d-XbS" firstAttribute="top" secondItem="Zeg-Nc-HgJ" secondAttribute="bottom" constant="50" id="mzt-M2-XhX"/>
+                            <constraint firstItem="1sN-0d-XbS" firstAttribute="top" secondItem="Zeg-Nc-HgJ" secondAttribute="bottom" constant="100" id="mzt-M2-XhX"/>
+                            <constraint firstItem="Zeg-Nc-HgJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="ogb-zn-C6T"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zeg-Nc-HgJ" secondAttribute="trailing" constant="30" id="rGV-fW-3gC"/>
                             <constraint firstItem="Zeg-Nc-HgJ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="upM-PD-bpU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Models" id="Mv2-jW-P5m"/>
+                    <navigationItem key="navigationItem" id="Dfr-91-Kwv"/>
                     <connections>
                         <outlet property="collectionView" destination="1sN-0d-XbS" id="UMJ-SZ-19N"/>
                         <outlet property="imageView" destination="5pp-vY-ynF" id="EDt-2d-NIr"/>
@@ -138,13 +140,28 @@
             </objects>
             <point key="canvasLocation" x="2030" y="-384"/>
         </scene>
+        <!--Add Images Controller-->
+        <scene sceneID="4B0-8d-MdI">
+            <objects>
+                <viewController storyboardIdentifier="AddImagesController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HmI-9E-893" customClass="AddImagesController" customModule="zAR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CY1-N5-3ci">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="x1q-zI-2hy"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dfH-F5-xkM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2740" y="-391"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="m1R-uD-bdY">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uEJ-mR-3HG" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="HyP-Td-irt">
-                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HyP-Td-irt">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" systemColor="labelColor"/>
@@ -161,13 +178,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arkit" catalog="system" width="128" height="125"/>
-        <image name="rotate.3d" catalog="system" width="128" height="123"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

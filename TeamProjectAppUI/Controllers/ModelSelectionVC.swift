@@ -15,6 +15,7 @@ class ModelSelectionVC: UIViewController,UICollectionViewDelegate,UICollectionVi
     
     var models = [Model]()
     var selectedImageName : String?
+    var selectedIndexPath : IndexPath?
     
     override func viewDidLoad() {
         
@@ -26,7 +27,7 @@ class ModelSelectionVC: UIViewController,UICollectionViewDelegate,UICollectionVi
         collectionView.delegate     = self
         collectionView.dataSource   = self
         collectionView.register(MyCollectionViewCell.nib() , forCellWithReuseIdentifier: MyCollectionViewCell.identifier)
-        
+        setUpNavTitle()
     }
     
     
@@ -41,6 +42,16 @@ class ModelSelectionVC: UIViewController,UICollectionViewDelegate,UICollectionVi
         let qlvc = self.storyboard?.instantiateViewController(withIdentifier: "QuickLookVC") as! QuickLookVC
         self.navigationController?.pushViewController(qlvc, animated: true)
         qlvc.activeImage = selectedImageName
+    }
+    
+
+    func setUpNavTitle(){
+        
+        let label = UILabel()
+        label.text = "Models"
+        label.font = UIFont.boldSystemFont(ofSize: 32)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: label)
+        
     }
     
     enum ModelType : String {
@@ -92,6 +103,13 @@ class ModelSelectionVC: UIViewController,UICollectionViewDelegate,UICollectionVi
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier:MyCollectionViewCell.identifier , for: indexPath) as! MyCollectionViewCell
         cell.configure(with: models[indexPath.row])
         cell.layer.cornerRadius = 20.0
+        if (indexPath == selectedIndexPath){
+            cell.layer.borderWidth = 2.0
+            cell.layer.borderColor = UIColor.green.cgColor
+        }
+        else{
+            cell.layer.borderWidth = 0.0
+        }
         return cell
     }
     
@@ -102,6 +120,8 @@ class ModelSelectionVC: UIViewController,UICollectionViewDelegate,UICollectionVi
         print(nameofTheImage)
         imageView.image = UIImage(named: nameofTheImage)
         selectedImageName = nameofTheImage
+        selectedIndexPath = indexPath
+        collectionView.reloadData()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
