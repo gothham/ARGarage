@@ -9,6 +9,7 @@
 import UIKit
 import RealityKit
 import ARKit
+import SwiftMessages
 
 class ARVC: UIViewController {
 
@@ -42,8 +43,25 @@ class ARVC: UIViewController {
         // setting the coaching overlay
         addCoachingOverlay()
         loadARView()
+        setupConstraintsForCaptureButton()
+        captureBtn.addTarget(self, action: #selector(captureSnapshot), for: .touchUpInside)
     }
 
+    @objc func captureSnapshot() {
+        arView.snapshot(saveToHDR: false) { [self] image in
+            guard let image = image else { return }
+            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+            print("Image capture, check the photo library in your phone")
+            self.showPopUpMsg("Photo captured")
+        }
+    }
+    
+    func showP2opUpMsg(_ message: String) {
+        let view = MessageView.viewFromNib(layout: .cardView)
+        let iconText = ["🤔", "😳", "🙄", "😶"].randomElement()!
+        view.configureContent(title: "Warning", body: message, iconText: iconText)
+        SwiftMessages.show(view: view)
+    }
     func loadARView() {
         alertBox(title: "Place Object", message: "Tap a location to place the object and scale down the object.")
         setUpARView()
@@ -56,7 +74,6 @@ class ARVC: UIViewController {
 
    // MARK: Setup methods
     func setUpARView() {
-        
         arView.automaticallyConfigureSession = false
         let configuration = ARWorldTrackingConfiguration()
         configuration.planeDetection = [.horizontal, .vertical]
@@ -86,9 +103,28 @@ class ARVC: UIViewController {
         let modelEntity = try! ModelEntity.loadModel(named: entityName)
         modelEntity.generateCollisionShapes(recursive: true)
         arView.installGestures([.all], for: modelEntity)
-//        let anchorEntity = AnchorEntity(anchor: anchor)
-//        anchorEntity.addChild(modelEntity)
-//        arView.scene.addAnchor(anchorEntity)
+        let anchorEntity = AnchorEntity(anchor: anchor)
+        anchorEntity.addChild(modelEntity)
+        arView.scene.addAnchor(anchorEntity)
+    }
+    
+    let captureBtn: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(systemName: "camera"), for: .normal)
+        return button
+    }()
+    
+    func setupConstraintsForCaptureButton() {
+        captureBtn.translatesAutoresizingMaskIntoConstraints = false
+        arView.addSubview(captureBtn)
+        
+        let contraints = [
+            captureBtn.trailingAnchor.constraint(equalTo: arView.trailingAnchor, constant: -30),
+            captureBtn.bottomAnchor.constraint(equalTo: arView.bottomAnchor, constant: -30),
+            captureBtn.heightAnchor.constraint(equalToConstant: 75),
+            captureBtn.widthAnchor.constraint(equalToConstant: 75)
+        ]
+        NSLayoutConstraint.activate(contraints)
     }
     
     func alertBox(title: String, message: String) {

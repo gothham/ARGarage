@@ -55,6 +55,7 @@
 		55FD8F1A29C07F1700C87605 /* GestureCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FD8F1829C07F1700C87605 /* GestureCollectionViewCell.swift */; };
 		55FD8F1B29C07F1700C87605 /* GestureCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55FD8F1929C07F1700C87605 /* GestureCollectionViewCell.xib */; };
 		55FD8F1D29C0837500C87605 /* Gestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FD8F1C29C0837500C87605 /* Gestures.swift */; };
+		55FD8F2229C0A5E900C87605 /* SwiftMessages in Frameworks */ = {isa = PBXBuildFile; productRef = 55FD8F2129C0A5E900C87605 /* SwiftMessages */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55FD8F2229C0A5E900C87605 /* SwiftMessages in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +323,9 @@
 			dependencies = (
 			);
 			name = zAR;
+			packageProductDependencies = (
+				55FD8F2129C0A5E900C87605 /* SwiftMessages */,
+			);
 			productName = TeamProjectAppUI;
 			productReference = 43B2A1A829A47CDE00F59EB8 /* zAR.app */;
 			productType = "com.apple.product-type.application";
@@ -349,6 +354,9 @@
 				Base,
 			);
 			mainGroup = 43B2A19F29A47CDE00F59EB8;
+			packageReferences = (
+				55FD8F2029C0A5E900C87605 /* XCRemoteSwiftPackageReference "SwiftMessages" */,
+			);
 			productRefGroup = 43B2A1A929A47CDE00F59EB8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -642,6 +650,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		55FD8F2029C0A5E900C87605 /* XCRemoteSwiftPackageReference "SwiftMessages" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftKickMobile/SwiftMessages.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		55FD8F2129C0A5E900C87605 /* SwiftMessages */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 55FD8F2029C0A5E900C87605 /* XCRemoteSwiftPackageReference "SwiftMessages" */;
+			productName = SwiftMessages;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 43B2A1A029A47CDE00F59EB8 /* Project object */;
 }
