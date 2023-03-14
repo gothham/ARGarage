@@ -52,16 +52,19 @@ class ARVC: UIViewController {
             guard let image = image else { return }
             UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
             print("Image capture, check the photo library in your phone")
-            self.showPopUpMsg("Photo captured")
+            self.showPopUpMsg(title: "Photo Captured", body: "Photo saved to library", iconImage: UIImage(systemName: "camera")!)
         }
     }
     
-    func showP2opUpMsg(_ message: String) {
-        let view = MessageView.viewFromNib(layout: .cardView)
-        let iconText = ["🤔", "😳", "🙄", "😶"].randomElement()!
-        view.configureContent(title: "Warning", body: message, iconText: iconText)
+    func showPopUpMsg(title: String, body: String, iconImage: UIImage) {
+        let view = MessageView.viewFromNib(layout: .centeredView)
+        view.configureDropShadow()
+        view.button?.isHidden = true
+        view.configureContent(title: title, body: body, iconImage: iconImage)
         SwiftMessages.show(view: view)
     }
+    
+    
     func loadARView() {
         alertBox(title: "Place Object", message: "Tap a location to place the object and scale down the object.")
         setUpARView()
@@ -111,18 +114,19 @@ class ARVC: UIViewController {
     let captureBtn: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(systemName: "camera"), for: .normal)
+        button.layer.cornerRadius = 37.5
+        button.backgroundColor = .systemGray6
         return button
     }()
     
     func setupConstraintsForCaptureButton() {
         captureBtn.translatesAutoresizingMaskIntoConstraints = false
         arView.addSubview(captureBtn)
-        
         let contraints = [
-            captureBtn.trailingAnchor.constraint(equalTo: arView.trailingAnchor, constant: -30),
-            captureBtn.bottomAnchor.constraint(equalTo: arView.bottomAnchor, constant: -30),
+            captureBtn.centerXAnchor.constraint(equalTo: arView.centerXAnchor),
             captureBtn.heightAnchor.constraint(equalToConstant: 75),
-            captureBtn.widthAnchor.constraint(equalToConstant: 75)
+            captureBtn.widthAnchor.constraint(equalToConstant: 75),
+            captureBtn.bottomAnchor.constraint(equalTo: arView.bottomAnchor, constant: -44)
         ]
         NSLayoutConstraint.activate(contraints)
     }

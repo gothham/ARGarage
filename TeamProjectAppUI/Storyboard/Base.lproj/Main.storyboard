@@ -36,26 +36,28 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleAspectFit" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="Zeg-Nc-HgJ" userLabel="Stack view">
-                                <rect key="frame" x="44.666666666666657" y="573" width="304" height="45"/>
+                                <rect key="frame" x="39.666666666666657" y="573" width="314" height="45"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v3o-a9-FTI">
-                                        <rect key="frame" x="0.0" y="0.0" width="136" height="45"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="141" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="kax-Jn-J3o"/>
                                         </constraints>
+                                        <color key="tintColor" systemColor="labelColor"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" image="arkit" catalog="system" title="View in AR" cornerStyle="capsule"/>
+                                        <buttonConfiguration key="configuration" style="gray" image="arkit" catalog="system" imagePlacement="trailing" title="View in AR" imagePadding="5" cornerStyle="capsule"/>
                                         <connections>
                                             <action selector="viewInARAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="igb-JP-Tuw"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orZ-uQ-ybg">
-                                        <rect key="frame" x="168" y="0.0" width="136" height="45"/>
+                                        <rect key="frame" x="173" y="0.0" width="141" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="HN5-OA-KOj"/>
                                         </constraints>
+                                        <color key="tintColor" systemColor="labelColor"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" image="scale.3d" catalog="system" title="Quick Look" cornerStyle="capsule"/>
+                                        <buttonConfiguration key="configuration" style="gray" image="scale.3d" catalog="system" imagePlacement="trailing" title="Quick Look" imagePadding="5" cornerStyle="capsule"/>
                                         <connections>
                                             <action selector="quickLookAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5ZJ-N5-0FJ"/>
                                         </connections>
@@ -204,11 +206,12 @@
                                     <constraint firstAttribute="height" constant="40" id="bcy-N9-TMa"/>
                                     <constraint firstAttribute="width" constant="150" id="hUL-3p-r3e"/>
                                 </constraints>
+                                <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Next"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrowtriangle.forward" catalog="system" imagePlacement="trailing" title="Next" imagePadding="5" cornerStyle="capsule"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="6"/>
+                                        <real key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -268,6 +271,7 @@
     </scenes>
     <resources>
         <image name="arkit" catalog="system" width="128" height="125"/>
+        <image name="arrowtriangle.forward" catalog="system" width="128" height="113"/>
         <image name="lightbulb" catalog="system" width="92" height="128"/>
         <image name="scale.3d" catalog="system" width="128" height="109"/>
         <systemColor name="labelColor">
