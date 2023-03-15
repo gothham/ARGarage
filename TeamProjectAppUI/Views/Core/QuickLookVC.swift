@@ -19,22 +19,34 @@ class QuickLookVC: UIViewController {
     var activeModel:String?
     
 //MARK: - Here converting the imageName to modelName -
-    let fetchModel = ["AeroPlaneImage": "toy_car.usdz",
-                       "AirCraftImage": "toy_biplane_idle.usdz",
-                       "CakeImage": "cake.usdz",
-                       "CupSaucerImage": "cup_saucer_set.usdz",
-                       "GramoPhoneImage": "gramophone.usdz",
-                       "GuitarImage": "fender_stratocaster.usdz",
-                       "RadioImage": "tv_retro.usdz",
-                       "RedChairImage": "chair_swan.usdz",
-                       "RobotImage": "robot_walk_idle.usdz",
-                       "ShoeImage": "sneaker_airforce.usdz",
-                       "SportShoeImage": "sneaker_pegasustrail.usdz",
-                       "TeaPotImage": "teapot.usdz",
-                       "ToyImage": "toy_drummer_idle.usdz",
-                       "TulipImage": "flower_tulip.usdz",
-                       "WateringCanImage": "wateringcan.usdz"
-    ]
+    let fetchModel = [
+                           "AeroPlaneImage"     : "toy_car.usdz",
+                           "AirCraftImage"      : "toy_biplane_idle.usdz",
+                           "CakeImage"          : "cake.usdz",
+                           "CupSaucerImage"     : "cup_saucer_set.usdz",
+                           "GramoPhoneImage"    : "gramophone.usdz",
+                           "GuitarImage"        : "fender_stratocaster.usdz",
+                           "RadioImage"         : "tv_retro.usdz",
+                           "RedChairImage"      : "chair_swan.usdz",
+                           "RobotImage"         : "robot_walk_idle.usdz",
+                           "ShoeImage"          : "sneaker_airforce.usdz",
+                           "SportShoeImage"     : "sneaker_pegasustrail.usdz",
+                           "TeaPotImage"        : "teapot.usdz",
+                           "ToyImage"           : "toy_drummer_idle.usdz",
+                           "TulipImage"         : "flower_tulip.usdz",
+                           "WateringCanImage"   : "wateringcan.usdz",
+                           "TestChair"          : "Conference_Chair.usdz",
+                           "ShipImage"          : "Ship_in_a_bottle.usdz",
+                           "WhiteSofa"          : "White_Sofa.usdz",
+                           "ThreeSeaterSofa"    : "3_Seated_Sofa.usdz",
+                           "woodChair"          : "Kid_rocking_chair.usdz",
+                           "TeaPotTable"        : "Table.usdz",
+                           "TableLight"         : "Table_Lamp.usdz",
+                           "SoloCoach"          : "Brown_Sofa.usdz",
+                           "RomanChair"         : "Roman_Chair.usdz",
+                           "OldCoach"           : "Old_Sofa.usdz"
+                          
+        ]
     
 //MARK: - viewDidLoad Func -
     override func viewDidLoad() {

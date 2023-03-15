@@ -31,12 +31,12 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5pp-vY-ynF">
-                                <rect key="frame" x="23.666666666666657" y="117" width="345.66666666666674" height="409"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5pp-vY-ynF">
+                                <rect key="frame" x="23.666666666666657" y="159.66666666666666" width="345.66666666666674" height="366.33333333333337"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleAspectFit" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="Zeg-Nc-HgJ" userLabel="Stack view">
-                                <rect key="frame" x="41" y="573" width="311.33333333333326" height="45"/>
+                                <rect key="frame" x="41" y="573" width="311.33333333333331" height="45"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v3o-a9-FTI">
                                         <rect key="frame" x="0.0" y="0.0" width="139.66666666666666" height="45"/>
@@ -47,7 +47,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" image="arkit" catalog="system" imagePlacement="trailing" title="View in AR" imagePadding="5" cornerStyle="capsule"/>
                                         <connections>
-                                            <action selector="viewInARAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="igb-JP-Tuw"/>
+                                            <action selector="didTapViewInARAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jE8-kf-5Pt"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orZ-uQ-ybg">
@@ -76,16 +76,15 @@
                             <constraint firstItem="1sN-0d-XbS" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="T40-Cr-rlc"/>
                             <constraint firstItem="5pp-vY-ynF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="V8N-fN-iuQ"/>
                             <constraint firstItem="1sN-0d-XbS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eDI-tI-QcN"/>
-                            <constraint firstItem="5pp-vY-ynF" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.48" id="htL-Rl-7En"/>
+                            <constraint firstItem="5pp-vY-ynF" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.43" id="htL-Rl-7En"/>
                             <constraint firstItem="1sN-0d-XbS" firstAttribute="top" secondItem="Zeg-Nc-HgJ" secondAttribute="bottom" constant="50" id="mzt-M2-XhX"/>
                             <constraint firstItem="Zeg-Nc-HgJ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="upM-PD-bpU"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Mv2-jW-P5m">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="lightbulb" catalog="system" style="plain" id="KcV-8t-Iuf">
-                            <color key="tintColor" systemColor="labelColor"/>
+                        <barButtonItem key="rightBarButtonItem" image="florinsign" catalog="system" id="OcA-4g-djw">
                             <connections>
-                                <action selector="didTapQuickStartAction:" destination="BYZ-38-t0r" id="i0b-r8-nNM"/>
+                                <action selector="didTapFilterAction:" destination="BYZ-38-t0r" id="ZyN-M7-Xw2"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -272,7 +271,7 @@
     <resources>
         <image name="arkit" catalog="system" width="128" height="125"/>
         <image name="arrowtriangle.forward" catalog="system" width="128" height="113"/>
-        <image name="lightbulb" catalog="system" width="92" height="128"/>
+        <image name="florinsign" catalog="system" width="120" height="128"/>
         <image name="rotate.3d" catalog="system" width="128" height="123"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

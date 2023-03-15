@@ -19,21 +19,32 @@ class ARVC: UIViewController {
     var activeModel:String?
 
     let fetchModel = ["AeroPlaneImage": "toy_car",
-                   "AirCraftImage": "toy_biplane_idle",
-                   "CakeImage": "cake",
-                   "CupSaucerImage": "cup_saucer_set",
-                   "GramoPhoneImage": "gramophone",
-                   "GuitarImage": "fender_stratocaster",
-                   "RadioImage": "tv_retro",
-                   "RedChairImage": "chair_swan",
-                   "RobotImage": "robot_walk_idle",
-                   "ShoeImage": "sneaker_airforce",
-                   "SportShoeImage": "sneaker_pegasustrail",
-                   "TeaPotImage": "teapot",
-                   "ToyImage": "toy_drummer_idle",
-                   "TulipImage": "flower_tulip",
-                   "WateringCanImage": "wateringcan"
-                ]
+                       "AirCraftImage": "toy_biplane_idle",
+                       "CakeImage": "cake",
+                       "CupSaucerImage": "cup_saucer_set",
+                       "GramoPhoneImage": "gramophone",
+                       "GuitarImage": "fender_stratocaster",
+                       "RadioImage": "tv_retro",
+                       "RedChairImage": "chair_swan",
+                       "RobotImage": "robot_walk_idle",
+                       "ShoeImage": "sneaker_airforce",
+                       "SportShoeImage": "sneaker_pegasustrail",
+                       "TeaPotImage": "teapot",
+                       "ToyImage": "toy_drummer_idle",
+                       "TulipImage": "flower_tulip",
+                       "WateringCanImage": "wateringcan",
+                       "TestChair"          : "Conference_Chair",
+                       "ShipImage"          : "Ship_in_a_bottle",
+                       "WhiteSofa"          : "White_Sofa",
+                       "ThreeSeaterSofa"    : "3_Seated_Sofa",
+                       "woodChair"          : "Kid_rocking_chair",
+                       "TeaPotTable"        : "Table",
+                       "TableLight"         : "Table_Lamp",
+                       "SoloCoach"          : "Brown_Sofa",
+                       "RomanChair"         : "Roman_Chair",
+                       "OldCoach"           : "Old_Sofa"
+
+                    ]
 
 
     override func viewDidLoad() {
