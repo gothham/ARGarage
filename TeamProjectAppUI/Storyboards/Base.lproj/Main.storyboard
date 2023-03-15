@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -83,7 +84,14 @@
                             <constraint firstItem="Zeg-Nc-HgJ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="upM-PD-bpU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Dfr-91-Kwv"/>
+                    <navigationItem key="navigationItem" id="Dfr-91-Kwv">
+                        <barButtonItem key="rightBarButtonItem" id="4aX-FU-Uva">
+                            <imageReference key="image" image="arrowtriangle.down.circle.fill" catalog="system" symbolScale="large"/>
+                            <connections>
+                                <action selector="filterButtonTapped:" destination="BYZ-38-t0r" id="hbU-op-iBT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="1sN-0d-XbS" id="UMJ-SZ-19N"/>
                         <outlet property="imageView" destination="5pp-vY-ynF" id="EDt-2d-NIr"/>
@@ -140,21 +148,6 @@
             </objects>
             <point key="canvasLocation" x="2030" y="-384"/>
         </scene>
-        <!--Add Images Controller-->
-        <scene sceneID="4B0-8d-MdI">
-            <objects>
-                <viewController storyboardIdentifier="AddImagesController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HmI-9E-893" customClass="AddImagesController" customModule="zAR" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="CY1-N5-3ci">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="x1q-zI-2hy"/>
-                        <color key="backgroundColor" systemColor="systemGreenColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dfH-F5-xkM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2740" y="-391"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="m1R-uD-bdY">
             <objects>
@@ -178,14 +171,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrowtriangle.down.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

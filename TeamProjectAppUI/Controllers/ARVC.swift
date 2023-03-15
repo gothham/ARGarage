@@ -17,22 +17,41 @@ class ARVC: UIViewController {
     var activeImage: String?
     var activeModel:String?
 
-    let fetchModel = ["AeroPlaneImage": "toy_car",
-                   "AirCraftImage": "toy_biplane_idle",
-                   "CakeImage": "cake",
-                   "CupSaucerImage": "cup_saucer_set",
-                   "GramoPhoneImage": "gramophone",
-                   "GuitarImage": "fender_stratocaster",
-                   "RadioImage": "tv_retro",
-                   "RedChairImage": "chair_swan",
-                   "RobotImage": "robot_walk_idle",
-                   "ShoeImage": "sneaker_airforce",
-                   "SportShoeImage": "sneaker_pegasustrail",
-                   "TeaPotImage": "teapot",
-                   "ToyImage": "toy_drummer_idle",
-                   "TulipImage": "flower_tulip",
-                   "WateringCanImage": "wateringcan"
+    let fetchModel = ["AeroPlaneImage"  : "toy_car",
+                   "AirCraftImage"      : "toy_biplane_idle",
+                   "CakeImage"          : "cake",
+                   "CupSaucerImage"     : "cup_saucer_set",
+                   "GramoPhoneImage"    : "gramophone",
+                   "GuitarImage"        : "fender_stratocaster",
+                   "RadioImage"         : "tv_retro",
+                   "RedChairImage"      : "chair_swan",
+                   "RobotImage"         : "robot_walk_idle",
+                   "ShoeImage"          : "sneaker_airforce",
+                   "SportShoeImage"     : "sneaker_pegasustrail",
+                   "TeaPotImage"        : "teapot",
+                   "ToyImage"           : "toy_drummer_idle",
+                   "TulipImage"         : "flower_tulip",
+                   "WateringCanImage"   : "wateringcan",
+                   "TestChair"          : "Conference_Chair",
+                   "ShipImage"          : "Ship_in_a_bottle",
+                   "WhiteSofa"          : "White_Sofa",
+                   "ThreeSeaterSofa"    : "3_Seated_Sofa",
+                   "woodChair"          : "Kid_rocking_chair",
+                   "TeaPotTable"        : "Table",
+                   "TableLight"         : "Table_Lamp",
+                   "SoloCoach"          : "Brown_Sofa",
+                   "RomanChair"         : "Roman_Chair",
+                   "OldCoach"           : "Old_Sofa"
                 ]
+    
+    let addButtton : UIButton = {
+        
+        let button = UIButton()
+        button.setImage(UIImage(systemName: "plus.app"), for: .normal)
+        button.backgroundColor = .green
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         imageto3DModel()
@@ -40,8 +59,27 @@ class ARVC: UIViewController {
         // setting the coaching overlay
         addCoachingOverlay()
         loadARView()
+        setUpButton()
+        addButtton.addTarget(self, action: #selector(presentedController), for: .touchUpInside)
     }
-
+    
+    @objc func presentedController(){
+        let vc : Tablecontroller = Tablecontroller()
+        present(vc, animated: true)
+    }
+    
+    func setUpButton() {
+        arView.addSubview(addButtton)
+        addButtton.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            addButtton.widthAnchor.constraint(equalToConstant: 60),
+            addButtton.heightAnchor.constraint(equalToConstant: 60),
+            addButtton.trailingAnchor.constraint(equalTo: arView.trailingAnchor,constant: -30),
+            addButtton.topAnchor.constraint(equalTo: arView.safeAreaLayoutGuide.topAnchor, constant: 50)
+        ])
+    }
+    
     func imageto3DModel() {
         activeModel = fetchModel[activeImage!]
         print("Model name is \(String(describing: activeModel))")
@@ -83,9 +121,9 @@ class ARVC: UIViewController {
         let modelEntity = try! ModelEntity.loadModel(named: entityName)
         modelEntity.generateCollisionShapes(recursive: true)
         arView.installGestures([.all], for: modelEntity)
-        let anchorEntity = AnchorEntity(anchor: anchor)
-        anchorEntity.addChild(modelEntity)
-        arView.scene.addAnchor(anchorEntity)
+//        let anchorEntity = AnchorEntity(anchor: anchor)
+//        anchorEntity.addChild(modelEntity)
+//        arView.scene.addAnchor(anchorEntity)
     }
     
     func unknownlocationAlert() {

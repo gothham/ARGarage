@@ -13,9 +13,17 @@ class ModelSelectionVC: UIViewController,UICollectionViewDelegate,UICollectionVi
     @IBOutlet var collectionView : UICollectionView!
     @IBOutlet var imageView      : UIImageView!
     
-    var models = [Model]()
-    var selectedImageName : String?
-    var selectedIndexPath : IndexPath?
+    var standard            = [Model]()
+    var models              = [Model]()
+    var selectedImageName   : String?
+    var selectedIndexPath   : IndexPath?
+    var dropDownOptions     = ["All","Toys","Utensils","Furnitures","Food","Footwear","Instruments"]
+    var toysArray           : Array<ModelType> = [.aircraft,.aeroplane,.robot,.toy,.ship]
+    var utensilsArray       : Array<ModelType> = [.cupsaucer,.teapot,.wateringcan]
+    var furnitureArray      : Array<ModelType> = [.redchair,.test,.sofa,.sofa2,.woodChair,.teaPotTable,.soloCoach,.romanChair,.oldCoach]
+    var foodArray           : Array<ModelType> = [.cake,.tulip]
+    var footWearArray       : Array<ModelType> = [.shoe,.sportshoe]
+    var instrumentsArray    : Array<ModelType> = [.gramophone,.guitar,.radio,.tableLight]
     
     override func viewDidLoad() {
         
@@ -71,14 +79,84 @@ class ModelSelectionVC: UIViewController,UICollectionViewDelegate,UICollectionVi
         case sportshoe      = "SportShoeImage"
         case toy            = "ToyImage"
         case tulip          = "TulipImage"
+        case test           = "TestChair"
+        case ship           = "ShipImage"
+        case sofa           = "WhiteSofa"
+        case sofa2          = "ThreeSeaterSofa"
+        case woodChair      = "woodChair"
+        case teaPotTable    = "TeaPotTable"
+        case tableLight     = "TableLight"
+        case soloCoach      = "SoloCoach"
+        case romanChair     = "RomanChair"
+        case oldCoach       = "OldCoach"
+        
     }
     
     fileprivate func appendingTheModelObject(){
         
-        let modelTypes : [ModelType] = [.robot,.radio,.wateringcan,.teapot,.guitar,.cake,.cupsaucer,.gramophone,.aeroplane,.aircraft,.redchair,.shoe,.sportshoe,.toy,.tulip]
+        let modelTypes : [ModelType] = [.robot,.radio,.wateringcan,.teapot,.guitar,.cake,.cupsaucer,.gramophone,.aeroplane,.aircraft,.redchair,.shoe,.sportshoe,.toy,.tulip,.test,.ship,.sofa,.sofa2,.woodChair,.teaPotTable,.tableLight,.soloCoach,.romanChair,.oldCoach]
         for modelType in modelTypes {
-            models.append(Model(imageName: modelType.rawValue))
+            if toysArray.contains(modelType){
+                models.append(Model(imageName: modelType.rawValue, type: .toys))
+            } else if utensilsArray.contains(modelType){
+                models.append(Model(imageName: modelType.rawValue, type: .utensils))
+            } else if furnitureArray.contains(modelType){
+                models.append(Model(imageName: modelType.rawValue, type: .furnitures))
+            } else if foodArray.contains(modelType){
+                models.append(Model(imageName: modelType.rawValue, type: .food))
+            } else if footWearArray.contains(modelType){
+                models.append(Model(imageName: modelType.rawValue, type: .footwear))
+            } else {
+                models.append(Model(imageName: modelType.rawValue, type: .instruments))
+            }
         }
+        self.standard = self.models
+    }
+    
+    @IBAction func filterButtonTapped(_ sender: Any) {
+        showDropDownBox()
+    }
+    
+    func selectOption(option: String){
+        print("The selected option is \(option)")
+        
+        if option == "All"{
+            self.models = self.standard
+        }else{
+            self.models = self.standard.filter({$0.type == Seggregate(rawValue: option)})
+        }
+        self.collectionView.reloadData()
+    }
+
+    func showDropDownBox(){
+
+        let pickerView = UIPickerView()
+        pickerView.delegate = self
+        pickerView.dataSource = self
+
+        let alertController = UIAlertController(title: "Select an option", message: nil, preferredStyle: .alert)
+        alertController.view.addSubview(pickerView)
+
+        pickerView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            pickerView.topAnchor.constraint(equalTo: alertController.view.topAnchor, constant: 50),
+            pickerView.leadingAnchor.constraint(equalTo: alertController.view.leadingAnchor),
+            pickerView.trailingAnchor.constraint(equalTo: alertController.view.trailingAnchor),
+            pickerView.bottomAnchor.constraint(equalTo: alertController.view.bottomAnchor, constant: -50)
+        ])
+
+        let selectAction = UIAlertAction(title: "Select", style: .default){ (action) in
+            let selectedIndex = pickerView.selectedRow(inComponent: 0)
+            let selectedOption = self.dropDownOptions[selectedIndex]
+            self.selectOption(option: selectedOption)
+
+        }
+        alertController.addAction(selectAction)
+
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        alertController.addAction(cancelAction)
+
+        present(alertController, animated: true)
     }
     
     func imageAppearance(){
@@ -94,7 +172,7 @@ class ModelSelectionVC: UIViewController,UICollectionViewDelegate,UICollectionVi
     // Collectionview
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
+    
         return models.count
     }
     
@@ -111,6 +189,7 @@ class ModelSelectionVC: UIViewController,UICollectionViewDelegate,UICollectionVi
             cell.layer.borderWidth = 0.0
         }
         return cell
+       
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -130,8 +209,36 @@ class ModelSelectionVC: UIViewController,UICollectionViewDelegate,UICollectionVi
     
 }
 
+extension ModelSelectionVC : UIPickerViewDelegate,UIPickerViewDataSource {
+    
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return dropDownOptions.count
+    }
+
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return dropDownOptions[row]
+    }
+    
+}
+
 struct Model {
     
     var imageName : String
+    var type : Seggregate
 }
  
+enum Seggregate : String {
+    
+    case toys = "Toys"
+    case utensils = "Utensils"
+    case furnitures = "Furnitures"
+    case food = "Food"
+    case footwear = "Footwear"
+    case instruments = "Instruments"
+    
+}
