@@ -331,7 +331,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 43B2A1A329A47CDE00F59EB8 /* Build configuration list for PBXProject "zAR" */;
+			buildConfigurationList = 43B2A1A329A47CDE00F59EB8 /* Build configuration list for PBXProject "Ovarlay" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -617,7 +617,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		43B2A1A329A47CDE00F59EB8 /* Build configuration list for PBXProject "zAR" */ = {
+		43B2A1A329A47CDE00F59EB8 /* Build configuration list for PBXProject "Ovarlay" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				43B2A1BA29A47CDF00F59EB8 /* Debug */,

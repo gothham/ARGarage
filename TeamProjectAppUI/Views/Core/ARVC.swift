@@ -18,21 +18,21 @@ class ARVC: UIViewController {
     var activeImage: String?
     var activeModel:String?
 
-    let fetchModel = ["AeroPlaneImage": "toy_car",
-                       "AirCraftImage": "toy_biplane_idle",
-                       "CakeImage": "cake",
-                       "CupSaucerImage": "cup_saucer_set",
-                       "GramoPhoneImage": "gramophone",
-                       "GuitarImage": "fender_stratocaster",
-                       "RadioImage": "tv_retro",
-                       "RedChairImage": "chair_swan",
-                       "RobotImage": "robot_walk_idle",
-                       "ShoeImage": "sneaker_airforce",
-                       "SportShoeImage": "sneaker_pegasustrail",
-                       "TeaPotImage": "teapot",
-                       "ToyImage": "toy_drummer_idle",
-                       "TulipImage": "flower_tulip",
-                       "WateringCanImage": "wateringcan",
+    let fetchModel = ["AeroPlaneImage"      : "toy_car",
+                       "AirCraftImage"      : "toy_biplane_idle",
+                      "CakeImage"           : "cake",
+                       "CupSaucerImage"     : "cup_saucer_set",
+                       "GramoPhoneImage"    : "gramophone",
+                       "GuitarImage"        : "fender_stratocaster",
+                       "RadioImage"         : "tv_retro",
+                       "RedChairImage"      : "chair_swan",
+                       "RobotImage"         : "robot_walk_idle",
+                       "ShoeImage"          : "sneaker_airforce",
+                       "SportShoeImage"     : "sneaker_pegasustrail",
+                       "TeaPotImage"        : "teapot",
+                       "ToyImage"           : "toy_drummer_idle",
+                       "TulipImage"         : "flower_tulip",
+                       "WateringCanImage"   : "wateringcan",
                        "TestChair"          : "Conference_Chair",
                        "ShipImage"          : "Ship_in_a_bottle",
                        "WhiteSofa"          : "White_Sofa",
@@ -117,9 +117,9 @@ class ARVC: UIViewController {
         let modelEntity = try! ModelEntity.loadModel(named: entityName)
         modelEntity.generateCollisionShapes(recursive: true)
         arView.installGestures([.all], for: modelEntity)
-//        let anchorEntity = AnchorEntity(anchor: anchor)
-//        anchorEntity.addChild(modelEntity)
-//        arView.scene.addAnchor(anchorEntity)
+        let anchorEntity = AnchorEntity(anchor: anchor)
+        anchorEntity.addChild(modelEntity)
+        arView.scene.addAnchor(anchorEntity)
     }
     
     let captureBtn: UIButton = {

@@ -81,7 +81,8 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Mv2-jW-P5m">
-                        <barButtonItem key="rightBarButtonItem" image="florinsign" catalog="system" id="OcA-4g-djw">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="filter-filled-24px" id="OcA-4g-djw">
+                            <color key="tintColor" systemColor="labelColor"/>
                             <connections>
                                 <action selector="didTapFilterAction:" destination="BYZ-38-t0r" id="ZyN-M7-Xw2"/>
                             </connections>
@@ -167,7 +168,7 @@
     </scenes>
     <resources>
         <image name="arkit" catalog="system" width="128" height="125"/>
-        <image name="florinsign" catalog="system" width="120" height="128"/>
+        <image name="filter-filled-24px" width="24" height="24"/>
         <image name="rotate.3d" catalog="system" width="128" height="123"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
