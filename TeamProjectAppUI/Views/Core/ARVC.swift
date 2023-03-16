@@ -17,6 +17,7 @@ class ARVC: UIViewController {
 
     var activeImage: String?
     var activeModel:String?
+    var NamedAnchor: String = ""
 
     let fetchModel = ["AeroPlaneImage"      : "toy_car",
                        "AirCraftImage"      : "toy_biplane_idle",
@@ -43,7 +44,6 @@ class ARVC: UIViewController {
                        "SoloCoach"          : "Brown_Sofa",
                        "RomanChair"         : "Roman_Chair",
                        "OldCoach"           : "Old_Sofa"
-
                     ]
 
 
@@ -116,10 +116,13 @@ class ARVC: UIViewController {
         // MARK: unwrap the ModelEntity properly
         let modelEntity = try! ModelEntity.loadModel(named: entityName)
         modelEntity.generateCollisionShapes(recursive: true)
+//        modelEntity.move(to: Transform(scale: simd_make), relativeTo: <#T##Entity?#>)
         arView.installGestures([.all], for: modelEntity)
-        let anchorEntity = AnchorEntity(anchor: anchor)
-        anchorEntity.addChild(modelEntity)
-        arView.scene.addAnchor(anchorEntity)
+//        let anchorEntity = AnchorEntity(anchor: anchor)
+//        anchorEntity.name = activeModel!
+////        anchorEntity.setScale(<#T##scale: SIMD3<Float>##SIMD3<Float>#>, relativeTo: <#T##Entity?#>)
+//        anchorEntity.addChild(modelEntity)
+//        arView.scene.addAnchor(anchorEntity)
     }
     
     let captureBtn: UIButton = {
@@ -156,6 +159,7 @@ extension ARVC: ARSessionDelegate {
         for anchor in anchors {
             if let anchorName = anchor.name, anchorName == activeModel! {
                 placeObject(named: anchorName, for: anchor)
+                NamedAnchor = anchorName
             }
         }
     }
@@ -191,4 +195,14 @@ extension ARVC {
         self.loadARView()
     }*/
 }
-
+// trying to remove objects from the ARSession
+//extension ARVC {
+//    func removeObject() {
+//        let longPressGestureRecog = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(recognizer:)))
+//        arView.addGestureRecognizer(longPressGestureRecog)
+//    }
+//
+//    @objc func handleLongPress(recognizer: UILongPressGestureRecognizer) {
+//        arView.session.removeAnchor(NamedAnchor)
+//    }
+//}

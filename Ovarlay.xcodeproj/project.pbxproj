@@ -16,6 +16,7 @@
 		43B2A1C729A499DC00F59EB8 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B2A1C529A499DC00F59EB8 /* MyCollectionViewCell.swift */; };
 		43B2A1C829A499DC00F59EB8 /* MyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43B2A1C629A499DC00F59EB8 /* MyCollectionViewCell.xib */; };
 		43BB968429A78D7A0096CD80 /* ARVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BB968329A78D7A0096CD80 /* ARVC.swift */; };
+		55B7190729C2E23E00F51A4D /* robot_walk_idle.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 55B7190629C2E23E00F51A4D /* robot_walk_idle.usdz */; };
 		55DA60B529BB2FE30014CBE6 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DA60B429BB2FE30014CBE6 /* UIView+Extension.swift */; };
 		55DA60B829BB326E0014CBE6 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DA60B729BB326E0014CBE6 /* OnboardingSlide.swift */; };
 		55F727A529C1981A0089716B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55F727A429C1981A0089716B /* Assets.xcassets */; };
@@ -40,7 +41,6 @@
 		55F727D829C198850089716B /* toy_car.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 55F727BB29C198850089716B /* toy_car.usdz */; };
 		55F727D929C198850089716B /* sneaker_airforce.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 55F727BC29C198850089716B /* sneaker_airforce.usdz */; };
 		55F727DA29C198850089716B /* gramophone.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 55F727BD29C198850089716B /* gramophone.usdz */; };
-		55F727DB29C198850089716B /* robot_walk_idle.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 55F727BE29C198850089716B /* robot_walk_idle.usdz */; };
 		55F727DC29C198850089716B /* Table_Lamp.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 55F727BF29C198850089716B /* Table_Lamp.usdz */; };
 		55F727DD29C198850089716B /* toy_biplane_idle.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 55F727C029C198850089716B /* toy_biplane_idle.usdz */; };
 		55F727DE29C198850089716B /* cake.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 55F727C129C198850089716B /* cake.usdz */; };
@@ -68,6 +68,7 @@
 		43B2A1C529A499DC00F59EB8 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		43B2A1C629A499DC00F59EB8 /* MyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionViewCell.xib; sourceTree = "<group>"; };
 		43BB968329A78D7A0096CD80 /* ARVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARVC.swift; sourceTree = "<group>"; };
+		55B7190629C2E23E00F51A4D /* robot_walk_idle.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = robot_walk_idle.usdz; sourceTree = "<group>"; };
 		55DA60B429BB2FE30014CBE6 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		55DA60B729BB326E0014CBE6 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
 		55F727A429C1981A0089716B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -92,7 +93,6 @@
 		55F727BB29C198850089716B /* toy_car.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = toy_car.usdz; sourceTree = "<group>"; };
 		55F727BC29C198850089716B /* sneaker_airforce.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = sneaker_airforce.usdz; sourceTree = "<group>"; };
 		55F727BD29C198850089716B /* gramophone.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = gramophone.usdz; sourceTree = "<group>"; };
-		55F727BE29C198850089716B /* robot_walk_idle.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = robot_walk_idle.usdz; sourceTree = "<group>"; };
 		55F727BF29C198850089716B /* Table_Lamp.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Table_Lamp.usdz; sourceTree = "<group>"; };
 		55F727C029C198850089716B /* toy_biplane_idle.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = toy_biplane_idle.usdz; sourceTree = "<group>"; };
 		55F727C129C198850089716B /* cake.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = cake.usdz; sourceTree = "<group>"; };
@@ -237,6 +237,7 @@
 		55F727B529C198850089716B /* PrototypeModels */ = {
 			isa = PBXGroup;
 			children = (
+				55B7190629C2E23E00F51A4D /* robot_walk_idle.usdz */,
 				55F727B629C198850089716B /* flower_tulip.usdz */,
 				55F727B729C198850089716B /* wateringcan.usdz */,
 				55F727B829C198850089716B /* chair_swan.usdz */,
@@ -245,7 +246,6 @@
 				55F727BB29C198850089716B /* toy_car.usdz */,
 				55F727BC29C198850089716B /* sneaker_airforce.usdz */,
 				55F727BD29C198850089716B /* gramophone.usdz */,
-				55F727BE29C198850089716B /* robot_walk_idle.usdz */,
 				55F727BF29C198850089716B /* Table_Lamp.usdz */,
 				55F727C029C198850089716B /* toy_biplane_idle.usdz */,
 				55F727C129C198850089716B /* cake.usdz */,
@@ -368,6 +368,7 @@
 				55F727D929C198850089716B /* sneaker_airforce.usdz in Resources */,
 				55F727DF29C198850089716B /* sneaker_pegasustrail.usdz in Resources */,
 				55F727CC29C198850089716B /* White_Living_Room.usdz in Resources */,
+				55B7190729C2E23E00F51A4D /* robot_walk_idle.usdz in Resources */,
 				55F727CD29C198850089716B /* White_Sofa.usdz in Resources */,
 				43B2A1C829A499DC00F59EB8 /* MyCollectionViewCell.xib in Resources */,
 				55F727C929C198850089716B /* Roman_Chair.usdz in Resources */,
@@ -388,7 +389,6 @@
 				43B2A1B329A47CDE00F59EB8 /* Main.storyboard in Resources */,
 				55F727D129C198850089716B /* Conference_Chair.usdz in Resources */,
 				55F727D429C198850089716B /* wateringcan.usdz in Resources */,
-				55F727DB29C198850089716B /* robot_walk_idle.usdz in Resources */,
 				55F727CE29C198850089716B /* Table.usdz in Resources */,
 				55FD8F1629C07BE200C87605 /* QuickStartVC.xib in Resources */,
 				55F727E029C198850089716B /* toy_drummer_idle.usdz in Resources */,

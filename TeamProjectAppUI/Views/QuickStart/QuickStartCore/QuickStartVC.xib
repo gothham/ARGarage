@@ -55,7 +55,7 @@
                 <constraint firstItem="eqn-Ty-HzN" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="heQ-Ak-DXA"/>
                 <constraint firstItem="eqn-Ty-HzN" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.7" id="muW-Cc-IKg"/>
             </constraints>
-            <point key="canvasLocation" x="136.64122137404578" y="19.718309859154932"/>
+            <point key="canvasLocation" x="124" y="10"/>
         </view>
     </objects>
     <resources>
